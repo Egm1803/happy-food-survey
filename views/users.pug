@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1 #{title}
+  hr
+  form(method='POST' action='')
+    div.form-group.form
+      label(for='name') Username:
+      input#name.form-control(type='text',  name='name', required)
+      label(for='password') Password:
+      input#name.form-control(type='text',  name='password', required)
+      br
+    button.btn.btn-primary(type='submit') Add User
+  if newUser
+    hr
+    h4 "#{newUser}" added.
+  if authErr
+    hr
+    h4 #{authErr}
+  if errors
+    ul
+      for error in errors
+          li!= error.msg

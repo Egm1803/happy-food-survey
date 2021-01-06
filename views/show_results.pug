@@ -1,0 +1,41 @@
+extends layout
+
+
+block content
+    //-  if selected all, just refresh the page(get request)
+    script.
+        function showAll(e) {            
+            if (this.centre.value==="allCentres") 
+            e.preventDefault();
+            window.location.href=window.location.href;
+        }  
+    h1 Happy Food Survey - Results
+    hr
+    form(method='POST' action='' onsubmit="return showAll(event,this)")
+        div.form-check.form
+            label(for='centre') Select a specific centre:
+                select#centre.form-control(type='select' placeholder='select centre' name='centre' required='true')
+                    option(value="allCentres" selected) All Centres
+                    for centre in centre_list
+                        if selectedCentreId==centre._id
+                            option(value=centre._id  selected) #{centre.name}
+                        else   
+                            option(value=centre._id) #{centre.name}
+        button.btn.btn-primary( type='submit') Get results
+        br
+        br
+        table.table
+            tr
+                th Food
+                th Average Rating
+                th Consumption rate
+            for feedback in feedback_list
+                tr
+                    td #{feedback._id}
+                    td #{feedback.avg} / 5
+                    td %#{feedback.consumption}
+    if errors 
+        ul
+            for error in errors
+                li!= error.msg
+    

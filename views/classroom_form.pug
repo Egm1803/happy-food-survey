@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1 #{title}
+  hr
+  form(method='POST' action='')
+    div.form-group.form
+      label(for='name') Classroom name:
+      input#name.form-control(type='text', placeholder='i.e Wattles' name='name' value=(undefined===classroom ? '' : classroom.name), required)
+    button.btn.btn-primary(type='submit') Submit
+    if classroom
+      hr
+      p "#{classroom}" added.
+    if valErr
+      hr
+      p #{valErr}
+  if errors 
+   ul
+    for error in errors
+     li!= error.msg

@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 #{title}
+  hr
+  form.form(method='POST' action='')
+    div.form-group.form
+      label(for='name') Centre name:
+        input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required)
+      br  
+      for classroom in classroom_list
+        div.checkbox-container
+          input.classroom.form-check-input(type='checkbox', name='classroom' value= classroom.name)
+          label.form-check-label(for='classroom') #{classroom.name}
+    button.btn.btn-primary(type='submit') Save Centre
+    if centre
+      hr
+      p "#{centre.name}" added.
+    if valErr
+      hr
+      p #{valErr}
+  if errors 
+   ul
+    for error in errors
+     li!= error.msg

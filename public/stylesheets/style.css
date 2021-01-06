@@ -1,0 +1,116 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.sidebar-nav {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.form {
+  max-width: 30rem;
+}
+
+input[type=checkbox] {
+  margin: 0.5rem;
+}
+
+label {
+  margin-top: 5px;
+}
+
+/*Star RatingOne*/
+
+/* .ratingOne {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.ratingOne > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.ratingOne > span:hover:before,
+.ratingOne > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+} */
+
+/*starRating*/
+.starRating {
+  float:left;
+  clear:right;
+}
+
+.starRating:not(:checked) > input {
+  position:absolute;
+  top:auto;
+  clip:rect(0,0,0,0);
+}
+
+.starRating:not(:checked) > label {
+  float:right;
+  width:1em;
+  padding:0.1em;
+  overflow:hidden;
+  white-space:nowrap;
+  line-height:1.3;
+  cursor:pointer;
+  font-size:300%;
+  color:#ddd;
+  text-shadow:1px 1px rgb(153, 153, 153), 1px 1px #666, .1em .1em .2em rgba(0,0,0,.1);
+}
+
+.starRating:not(:checked) > label:before {
+  content: '★ ';
+}
+
+.starRating > input:checked ~ label {
+  color: rgb(255, 179, 0);
+  text-shadow:1px 1px rgba(204, 126, 0, 0.883), 1px 1px rgb(153, 94, 0), .1em .1em .1em rgba(0,0,0,.1);
+}
+
+.starRating:not(:checked) > label:hover,
+.starRating:not(:checked) > label:hover ~ label {
+  color: gold;
+  text-shadow:1px 1px goldenrod, 1px 1px #B57340, .1em .1em .1em rgba(0,0,0,.1);
+}
+
+.starRating > input:checked + label:hover,
+.starRating > input:checked + label:hover ~ label,
+.starRating > input:checked ~ label:hover,
+.starRating > input:checked ~ label:hover ~ label,
+.starRating > label:hover ~ input:checked ~ label {
+  color: #ea0;
+  /* text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5); */
+}
+
+.starRating > label:active {
+  position:relative;
+  top:2px;
+  left:2px;
+}
+
+#fdbkSubmit {
+  float: left;
+  clear: both;
+  margin-top: 2rem;
+}
+
+.starLabel { 
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+
+#starLegend {
+  border-bottom: solid 0.2px rgba(185, 185, 185, 0.13);
+}

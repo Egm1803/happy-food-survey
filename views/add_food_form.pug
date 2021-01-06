@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  h1 #{title}
+  hr
+  form(method='POST' action='')
+    div.form-group.form
+      label(for='name') Food:
+      input#name.form-control(type='text', placeholder='Curry, risotto etc.', name='name', required )
+      label(for='week') Week:
+      select#week.form-control(type='select', placeholder='select week', name='week',required )
+        option(value="" disabled selected) -- Select --
+        option(value='1') Week 1
+        option(value='2') Week 2
+        option(value='3') Week 3
+        option(value='4') Week 4
+      label(for='day') Day:
+      select#day.form-control(type='select', placeholder='select day', name='day',required )
+        option(value="" disabled selected ) -- Select --
+        option(value='Monday') Monday
+        option(value='Tuesday') Tuesday
+        option(value='Wednesday') Wednesday
+        option(value='Thursday') Thursday
+        option(value='Friday') Friday
+      label(for='meal') Meal:
+      select#meal.form-control(type='select', placeholder='select meal', name='meal',required)
+        option(value="" disabled selected) -- Select --
+        option(value='Morning Tea') Morning Tea
+        option(value='Lunch') Lunch
+        option(value='Afternoon Tea') Afternoon Tea
+    button.btn.btn-primary(type='submit') Submit
+    if food
+      hr
+      p "#{food}" is added.
+    if valErr
+      hr
+      p #{valErr}
+  if errors 
+   ul
+    for error in errors
+     li!= error.msg

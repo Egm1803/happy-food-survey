@@ -1,0 +1,90 @@
+extends layout
+
+block content
+  //- script.
+  //-   function isFutureDate(e,this){
+      
+  //-     var date = this.date.value;
+  //-     console.log(date);
+  //-     var today = new Date().getTime(),
+  //-     date = date.split("/");
+  //-     console.log(date);
+  //-     date = new Date(date[2], date[1] - 1, date[0]).getTime();
+  //-     console.log(date);
+  //-     return (today - date) < 0;
+  //-     e.preventDefault();
+  //-   }
+    
+  h1 Happy Food Form
+  hr
+  form(method='POST' action='', onsubmit="return isFutureDate(event,this)")
+    div.form-group.form
+      label(for='centre') Centre:
+      select.form-control(type='select', placeholder='select centre', name='centre', required='true')
+        option(value="" disabled selected) -- Select --
+        for centre in centre_list
+            option(value=centre._id) #{centre.name}          
+      label(for='classroom') Classroom:
+      select.form-control(type='select' placeholder='select classroom', name='classroom', required='true')
+        option(value="" disabled selected) -- Select --
+        for classroom in classroom_list
+            option(value=classroom._id) #{classroom.name}
+      label(for='date') Date of food was served:
+      input#date.form-control(type='date', name='date', required='true')
+      label(for='food') Food:
+      select#food.form-control(type='select', placeholder='select food', name='food', required='true')
+        option(value="" disabled selected) -- Select --
+        optgroup(label='Week 1')
+            for food in food_list
+                if food.week==1
+                    option(value=food._id) #{food.name}
+        optgroup(label='Week 2')
+            for food in food_list
+                if food.week==2
+                    option(value=food._id) #{food.name}
+        optgroup(label='Week 3')
+            for food in food_list
+                if food.week==3
+                    option(value=food._id) #{food.name}
+        optgroup(label='Week 4')
+            for food in food_list
+                if food.week==4
+                    option(value=food._id) #{food.name}
+      label(for='numberOfChildren') Number Of Children:
+      input#numberOfChildren.form-control(type='number',  name='numberOfChildren', required='true')
+      label(for='howManyFinished') Number of children finished their serve:
+      input#howManyFinished.form-control(type='number',  name='howManyFinished', required='true')
+      //- label(for='rating') How happy they were with the food:
+      //- input#rating.form-control(type='number',  name='rating' required='true')
+      //- .ratingOne
+      //-   span &star;
+      //-   span &star;
+      //-   span &star;
+      //-   span &star;
+      //-   span &star;
+      br
+      p.starLabel How did they like the food?
+      fieldset.starRating
+        legend#starLegend.starLabel  Please rate:
+        input#star5(type='radio', name='rating', value='5', required='true')
+        label(for='star5', title='They loved it!') 5 stars
+        input#star4(type='radio', name='rating', value='4')
+        label(for='star4', title='They likede it') 4 stars
+        input#star3(type='radio', name='rating', value='3')
+        label(for='star3', title='Not too bad') 3 stars
+        input#star2(type='radio', name='rating', value='2')
+        label(for='star2', title='They were not a fan') 2 stars
+        input#star1(type='radio', name='rating', value='1')
+        label(for='star1', title="They didn't like it") 1 star
+      button#fdbkSubmit.btn.btn-primary(type='submit') Submit
+  script.
+    document.onload = setMaxDate();
+    document.onload = setMinDate();
+  if valErr
+    hr
+    p #{valErr}
+
+  if errors 
+   ul
+    for error in errors
+     li!= error.msg
