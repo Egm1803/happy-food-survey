@@ -5,7 +5,7 @@ var morgan = require('morgan');
 var path = require('path');
 //var createError = require('http-errors');
 
-//THIS MODULE IS FOR ONLY MORGAN LOGGING FOR NOW
+//THIS MODULE IS FOR ONLY MORGAN LOGGING
 module.exports = function (app) {
 // Morgan(request logger) file logger: create a write stream (in append mode)
     var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' });
