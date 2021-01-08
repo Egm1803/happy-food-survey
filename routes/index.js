@@ -22,11 +22,11 @@ router.get('/', asyncMiddleware(async function(req, res, next) {
 
 /* POST login */
 router.post('/', asyncMiddleware(async function(req, res, next) {
-    //console.log(req.body);
+    
     const { error } = joiSchema.validate(req.body);    
   
     if (error) return res.render('index',{title: 'Please Login', user: req.body.name, authErr: "Invalid username or password"});
-    console.log(req.user);
+    
     let user = await User.findOne({name: req.body.name});
     if (!user) return res.render('index',{title: 'Please Login', user: req.body.name, authErr: "Invalid username or password" });
 
