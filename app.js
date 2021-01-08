@@ -31,12 +31,12 @@ const logger = winston.createLogger({
   meta: true
 });
 
-// If we're not in production then log to the `console`:
-if (process.env.NODE_ENV !== 'production') {
+// If we're not in production(commented out) then log to the `console`:
+//if (process.env.NODE_ENV !== 'production') {
     logger.add(new winston.transports.Console({
     format: winston.format.prettyPrint(),
   }));
-}
+//}
 //log errors in error.log in every environment
 logger.add(new winston.transports.File({filename: 'error.log'}));
 
