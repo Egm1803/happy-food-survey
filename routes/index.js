@@ -9,7 +9,7 @@ const config = require('config');
 //const auth = require('../middleware/auth');
 
 router.get('/', asyncMiddleware(async function(req, res, next) {
-  // throw new Error('fake1 - something failed in index');    
+   throw new Error('fake1 - something failed in index');    
   if (req.cookies.rememberme){
       const token = req.cookies.rememberme;
       const decoded = jwt.verify(token, config.get('jwtPrivateKey'));
