@@ -36,8 +36,10 @@ if (process.env.NODE_ENV !== 'production') {
     logger.add(new winston.transports.Console({
     format: winston.format.prettyPrint(),
   }));
-  logger.add(new winston.transports.File({filename: 'error.log'}));
 }
+//log errors in error.log in every environment
+logger.add(new winston.transports.File({filename: 'error.log'}));
+
 // handle(log) all uncaught exceptions outside of express context
 process.on('uncaughtException', (ex)=>{
   logger.error({message: ex.message, level: ex.level, meta: ex});
