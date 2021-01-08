@@ -7,14 +7,14 @@ const auth = require('../middleware/auth');
 const admin = require('../middleware/admin');
 
 
-router.get('/', [auth,admin], asyncMiddleware( async function(req, res, next) {
+router.get('/', asyncMiddleware( async function(req, res, next) {
 
     res.render('users',{title: 'Add User', user: req.user.name });
     
 }));
-
+// , [auth,admin]
 /* POST new user */
-router.post('/', [auth,admin], asyncMiddleware( async function(req, res, next) {
+router.post('/', asyncMiddleware( async function(req, res, next) {
     const { error } = joiSchema.validate(req.body);    
     if (error) return res.render('users',{title: 'Add User',user: req.user.name, valErr: error.details[0].message});
 
