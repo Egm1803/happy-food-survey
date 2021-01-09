@@ -31,14 +31,12 @@ const logger = winston.createLogger({
   meta: true
 });
 
-// If we're not in production(commented out) then log to the `console`:
-//if (process.env.NODE_ENV !== 'production') {
-    logger.add(new winston.transports.Console({
-    format: winston.format.prettyPrint(),
-  }));
-//}
+//log errors to the `console`:
+logger.add(new winston.transports.Console({format: winston.format.prettyPrint()}));
 //log errors in error.log in every environment
 logger.add(new winston.transports.File({filename: 'error.log'}));
+//log in to db
+logger.add(new winston.transports.MongoDB({db: config.get('db'), capped: true, metaKey: 'meta'}));
 
 // handle(log) all uncaught exceptions outside of express context
 process.on('uncaughtException', (ex)=>{
@@ -54,7 +52,8 @@ process.on('unhandledRejection', (ex)=>{
 
 //JWT
 if(!config.get('jwtPrivateKey')) {
-  console.log('FATAL ERROR: jwtPrivateKey is not defined! Exiting process...')
+  console.log('FATAL ERROR: jwtPrivateKey is not defined! Exiting process...');
+  logger.log('FATAL ERROR: jwtPrivateKey is not defined! Exiting process...');
   process.exit(1);
 };
 
@@ -74,7 +73,6 @@ require('./startup/logging')(app);
 require('./startup/routes')(app);
 require('./startup/prod')(app);
 
-
 //DB connection
 const db = config.get('db');
   mongoose.connect(db, {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
@@ -90,12 +88,17 @@ app.use(function(err, req, res, next) {
   //log error with winston
   logger.error({message: err.message, level: err.level, meta: err});
   // set locals, only providing error in development
+
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+  if (process.env.NODE_ENV === 'development') {
+    res.status(err.status || 500);
+    res.render('error');
+  } else {
+    
+  }
 });
 
 module.exports = app;

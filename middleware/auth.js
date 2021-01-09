@@ -7,7 +7,7 @@ function auth(req, res, next) {
     const token = req.cookies.rememberme;
 
     if (!token)  {
-        res.redirect(401, 'http://https://happy-food-survey.herokuapp.com/:3000/');
+        res.redirect(401, 'https://happy-food-survey.herokuapp.com/');
         return;
     };
 
