@@ -94,8 +94,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page in development etc., error_redirect page in production.
   if (app.get('env') === 'production') {
-    const redirectString = config.get('home') ;
-    res.render('error_redirect', { redirectString });
+    res.render('error_redirect');
   } else {
     res.status(err.status || 500);
     res.render('error');

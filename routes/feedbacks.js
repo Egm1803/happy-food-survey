@@ -10,12 +10,15 @@ const educator = require('../middleware/educator');
 
 
 router.get('/', [auth,educator], asyncMiddleware(async function(req, res, next) {
-  throw new Error('fake1 - something failed in index');
+
   let foods = await Food.find({});
   let classrooms = await Classroom.find({});
   let centres = await Centre.find({});
 
-  res.render('feedback_form', {food_list: foods, classroom_list: classrooms, centre_list: centres, user: req.user.name});
+  //To hide the Fill Out The Form link in layout bar
+  let hidden = "hidden";
+
+  res.render('feedback_form', {food_list: foods, classroom_list: classrooms, centre_list: centres, user: req.user.name, hidden});
 
 }));
 

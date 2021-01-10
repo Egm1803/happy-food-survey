@@ -2,7 +2,7 @@ doctype html
 html(lang='en')
   head
     if (userLogged)
-      meta(http-equiv="refresh" content="0; URL="+redirectString+"")
+      meta(http-equiv="refresh" content="0; URL='/api/feedbacks'")
     title= title
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
@@ -20,12 +20,11 @@ html(lang='en')
               if (user==='Educator' || user==='Manager' || user==='Admin' )
                 li.font-weight-bold Logged in as "#{user}"
                 li 
-                  a(href='/') Change User
-                  br
-                  hr
-                li 
-                  a(href='/api/feedbacks') Fill Out The Form                           
-                  br
+                  a(href='/') Tap here to change user
+                hr
+                if (!hidden)
+                  li 
+                    a(href='/api/feedbacks') Fill Out The Form
               if (user==='Manager' || user==='Admin')
                 li 
                   a(href='/api/showResults') Results

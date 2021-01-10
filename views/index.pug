@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  h1 Welcome to the Happy Food Survey
+  h1 Happy Food Survey
   hr
   br
   h2 #{title}
@@ -13,9 +13,6 @@ block content
       input#name.form-control(type='text',  name='password' )
       br
       button.btn.btn-primary(type='submit') Login
-  //- if user
-  //-   hr
-  //-   h4 Signed in as "#{user}"
   if authErr
     hr
     h4 #{authErr}
