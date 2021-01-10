@@ -93,11 +93,12 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
-  if (process.env.NODE_ENV === 'development') {
+  if (app.get('env') === 'development') {
     res.status(err.status || 500);
     res.render('error');
   } else {
-    
+    const redirectString = config.get('home') ;
+    res.render('error_redirect', { redirectString });
   }
 });
 

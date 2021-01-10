@@ -22,7 +22,7 @@ router.get('/', asyncMiddleware(async function(req, res, next) {
 
 /* POST login */
 router.post('/', asyncMiddleware(async function(req, res, next) {
-    
+
     const { error } = joiSchema.validate(req.body);    
   
     if (error) return res.render('index',{title: 'Please Login', user: req.body.name, authErr: "Invalid username or password"});
@@ -41,9 +41,11 @@ router.post('/', asyncMiddleware(async function(req, res, next) {
     const token = user.generateAuthToken();
 
     const userLogged = 'userLogged';
+    //set redirect string according to the environment
+    redirectString = config.get('home') + '/api/feedbacks';
 
     res.cookie('rememberme', token, cookieOptions);
-    res.render('index',{title: 'Please Login', userLogged});
+    res.render('index',{title: 'Please Login', redirectString, userLogged});
     
 }));
 

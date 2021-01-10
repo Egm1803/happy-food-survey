@@ -2,7 +2,7 @@ doctype html
 html(lang='en')
   head
     if (userLogged)
-      meta(http-equiv="refresh" content="0; URL='https://happy-food-survey.herokuapp.com/api/feedbacks'")
+      meta(http-equiv="refresh" content="0; URL="+redirectString+"")
     title= title
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
@@ -11,9 +11,6 @@ html(lang='en')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
     script(src="/javascripts/scripts.js")
     link(rel='stylesheet', href='/stylesheets/style.css')
-    //- script(type='text/javascript').
-    //-   function showAll (params) 
-    //-   alert(this);
   body
     div(class='container-fluid')
       div(class='row')

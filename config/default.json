@@ -1,4 +1,4 @@
 {
-    "jwtPrivateKey": "",
-    "db": "mongodb://localhost/generated-feedback-app"
-  }
+  "jwtPrivateKey": "",
+  "db": "mongodb://localhost/generated-feedback-app"
+}
