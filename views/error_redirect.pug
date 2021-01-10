@@ -1,5 +1,6 @@
 extends layout
 
 block content
-  h1 Oops... Something failed. Please tap on the link to redirect.
-  h2 #{redirectString}
+  h2 Oops... Something failed. Please tap on
+    span(href=redirectString font-size="33px") here to redirect.
+  //- h2 #{redirectString}
