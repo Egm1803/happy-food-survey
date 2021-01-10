@@ -10,7 +10,7 @@ const educator = require('../middleware/educator');
 
 
 router.get('/', [auth,educator], asyncMiddleware(async function(req, res, next) {
-  //MDN:
+  throw new Error('fake1 - something failed in index');
   let foods = await Food.find({});
   let classrooms = await Classroom.find({});
   let centres = await Centre.find({});
