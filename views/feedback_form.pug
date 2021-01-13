@@ -77,9 +77,6 @@ block content
         input#star1(type='radio', name='rating', value='1')
         label(for='star1', title="They didn't like it") 1 star
       button#fdbkSubmit.btn.btn-primary(type='submit') Submit
-  script.
-    document.onload = setMaxDate();
-    document.onload = setMinDate();
   if valErr
     hr
     p #{valErr}
@@ -88,3 +85,6 @@ block content
    ul
     for error in errors
      li!= error.msg
+  script.
+    document.onload = setMaxDate();
+    document.onload = setMinDate();

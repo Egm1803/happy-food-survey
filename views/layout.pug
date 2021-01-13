@@ -22,12 +22,14 @@ html(lang='en')
                 li 
                   a(href='/') Tap here to change user
                 hr
-                if (!hidden)
-                  li 
-                    a(href='/api/feedbacks') Fill Out The Form
+              if (!hidden)
+                li 
+                  a(href='/api/feedbacks') Fill Out The Form
+              hr
               if (user==='Manager' || user==='Admin')
                 li 
                   a(href='/api/showResults') Results
+              hr
               if (user==='Admin')                        
                 li 
                   a(href='/api/users') Create User                               

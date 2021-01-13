@@ -49,13 +49,16 @@ router.post('/', [auth,educator], asyncMiddleware(async function(req, res, next)
   });
 
   feedback = await feedback.save();
-
+   
+  //To hide the Fill Out The Form link in layout bar
+   let hidden = "hidden";
 
   res.render('feedback_form',{
     user: req.user.name, 
     food_list: foods, 
     classroom_list: classrooms, 
-    centre_list: centres
+    centre_list: centres,
+    hidden
   });
 }));
 
