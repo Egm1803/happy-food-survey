@@ -1,7 +1,7 @@
 //Set min and max date: 6 months prior - today
 function setMaxDate() {
-    console.log('WORKED max');
     var today = new Date();
+    console.log(today);
     var dd = today.getDate();
     var mm = today.getMonth()+1; //January is 0!
     var yyyy = today.getFullYear();
@@ -17,7 +17,6 @@ function setMaxDate() {
     };
 
 function setMinDate() {
-    console.log('WORKED min');
     var minDate = new Date();
     var dd = minDate.getDate();
     var mm = minDate.getMonth()-4; //January is 0!
