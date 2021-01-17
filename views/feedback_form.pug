@@ -1,23 +1,9 @@
 extends layout
 
-block content
-  //- script.
-  //-   function isFutureDate(e,this){
-      
-  //-     var date = this.date.value;
-  //-     console.log(date);
-  //-     var today = new Date().getTime(),
-  //-     date = date.split("/");
-  //-     console.log(date);
-  //-     date = new Date(date[2], date[1] - 1, date[0]).getTime();
-  //-     console.log(date);
-  //-     return (today - date) < 0;
-  //-     e.preventDefault();
-  //-   }
-    
+block content  
   h1 Happy Food Form
   hr
-  form(method='POST' action='', onsubmit="return isFutureDate(event,this)")
+  form(method='POST' action='')
     div.form-group.form
       label(for='centre') Centre:
       select.form-control(type='select', placeholder='select centre', name='centre', required='true')
@@ -54,14 +40,6 @@ block content
       input#numberOfChildren.form-control(type='number',  name='numberOfChildren', required='true')
       label(for='howManyFinished') Number of children finished their serve:
       input#howManyFinished.form-control(type='number',  name='howManyFinished', required='true')
-      //- label(for='rating') How happy they were with the food:
-      //- input#rating.form-control(type='number',  name='rating' required='true')
-      //- .ratingOne
-      //-   span &star;
-      //-   span &star;
-      //-   span &star;
-      //-   span &star;
-      //-   span &star;
       br
       p.starLabel How did they like the food?
       fieldset.starRating

@@ -27,8 +27,10 @@ const joiSchema = Joi.object({
     .label('Number of children finished their serve')
     .messages({'number.max':'Finished serves cannot be more than total children.'}),
   rating: Joi.number().min(0).max(5).required(),
-  date: Joi.date().less('now').required()
-  .messages({'date.less':"Date can\'t be in the future."})
+  // former check for less than now 
+  // date: Joi.date().less('now').required()
+  // .messages({'date.less':"Date can\'t be in the future."})
+  date: Joi.date().required()
 });
 
 exports.joiSchema = joiSchema;

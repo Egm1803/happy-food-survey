@@ -22,7 +22,6 @@ router.get('/', [auth,educator], asyncMiddleware(async function(req, res, next) 
 
 }));
 
-/* POST new food */
 router.post('/', [auth,educator], asyncMiddleware(async function(req, res, next) {
   
   let foods = await Food.find({});
