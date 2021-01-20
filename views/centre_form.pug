@@ -17,8 +17,10 @@ block content
       hr
       p "#{centre.name}" added.
     if valErr
-      hr
-      p #{valErr}
+      div
+        br
+        hr
+        p.valErr #{valErr}
   if errors 
    ul
     for error in errors

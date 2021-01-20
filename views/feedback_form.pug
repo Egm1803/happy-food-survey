@@ -54,10 +54,12 @@ block content
         label(for='star2', title='They were not a fan') 2 stars
         input#star1(type='radio', name='rating', value='1')
         label(for='star1', title="They didn't like it") 1 star
-      button#fdbkSubmit.btn.btn-primary(type='submit') Submit
+      button#fdbkSubmit.btn.btn-primary(type='submit') Submit  
   if valErr
-    hr
-    p #{valErr}
+    div
+      br
+      hr
+      p.valErr #{valErr}
 
   if errors 
    ul

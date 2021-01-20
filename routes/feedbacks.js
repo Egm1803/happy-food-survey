@@ -36,6 +36,20 @@ router.post('/', [auth,educator], asyncMiddleware(async function(req, res, next)
     centre_list: centres, 
     valErr: error.details[0].message
   });
+  //check if feedback exists
+  let duplicateFeedback = await Feedback.findOne({     
+    centre: req.body.centre, 
+    classroom: req.body.classroom,
+    date: req.body.date
+  });
+
+  if (duplicateFeedback) return res.render('feedback_form',{
+    user: req.user.name, 
+    food_list: foods, 
+    classroom_list: classrooms, 
+    centre_list: centres, 
+    valErr: 'This room has already filled the form for that day.'
+  });
 
   let feedback = new Feedback({
     centre: req.body.centre, 

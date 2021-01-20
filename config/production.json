@@ -1,3 +1,4 @@
 {
-    "home":"https://happy-food-survey.herokuapp.com/"
+    "home":"https://happy-food-survey.herokuapp.com/",
+    "changeUser":"https://happy-food-survey.herokuapp.com/api/changeuser"
 }

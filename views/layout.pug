@@ -20,7 +20,7 @@ html(lang='en')
               if (user==='Educator' || user==='Manager' || user==='Admin' )
                 li.font-weight-bold Logged in as "#{user}"
                 li 
-                  a(href='/') Tap here to change user
+                  a(href='/api/changeUser') Tap here to change user
                 hr
               if (!hidden)
                 li 
