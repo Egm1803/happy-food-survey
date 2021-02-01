@@ -21,16 +21,16 @@ html(lang='en')
                 li.font-weight-bold Logged in as "#{user}"
                 li 
                   a(href='/api/changeUser') Tap here to change user
-                hr
               if (!hidden)
+                hr              
                 li 
                   a(href='/api/feedbacks') Fill Out The Form
-              hr
               if (user==='Manager' || user==='Admin')
+                hr
                 li 
                   a(href='/api/showResults') Results
-              hr
               if (user==='Admin')                        
+                hr
                 li 
                   a(href='/api/users') Create User                               
                 li 

@@ -7,7 +7,7 @@ function auth(req, res, next) {
     const token = req.cookies.rememberme;
 
     if (!token)  {
-        res.redirect(401, config.get('home'));
+        res.redirect(config.get('home'));
         return;
     };
 
