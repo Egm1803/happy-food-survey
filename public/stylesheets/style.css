@@ -12,7 +12,6 @@ a {
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
-
 }
 
 .redirect-link{
@@ -35,6 +34,10 @@ input[type=checkbox] {
 
 label {
   margin-top: 5px;
+}
+
+.valErr {
+  clear: left;
 }
 
 

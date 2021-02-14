@@ -23,7 +23,9 @@ router.get('/', [auth,educator], asyncMiddleware(async function(req, res, next) 
 }));
 
 router.post('/', [auth,educator], asyncMiddleware(async function(req, res, next) {
-  
+  //To hide the Fill Out The Form link in layout bar
+  let hidden = "hidden";
+
   let foods = await Food.find({});
   let classrooms = await Classroom.find({});
   let centres = await Centre.find({});
@@ -34,7 +36,8 @@ router.post('/', [auth,educator], asyncMiddleware(async function(req, res, next)
     food_list: foods, 
     classroom_list: classrooms, 
     centre_list: centres, 
-    valErr: error.details[0].message
+    valErr: error.details[0].message,
+    hidden
   });
   //check if feedback exists
   let duplicateFeedback = await Feedback.findOne({     
@@ -48,7 +51,8 @@ router.post('/', [auth,educator], asyncMiddleware(async function(req, res, next)
     food_list: foods, 
     classroom_list: classrooms, 
     centre_list: centres, 
-    valErr: 'This room has already filled the form for that day.'
+    valErr: 'This room has already filled the form for that day.',
+    hidden
   });
 
   let feedback = new Feedback({
@@ -62,9 +66,6 @@ router.post('/', [auth,educator], asyncMiddleware(async function(req, res, next)
   });
 
   feedback = await feedback.save();
-   
-  //To hide the Fill Out The Form link in layout bar
-   let hidden = "hidden";
 
   res.render('feedback_form',{
     user: req.user.name, 

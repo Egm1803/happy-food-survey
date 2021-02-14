@@ -3,6 +3,9 @@ extends layout
 block content  
   h1 Happy Food Form
   hr
+  if valErr
+    div.valErr.alert.alert-danger
+      p Failed to submit: #{valErr}
   form(method='POST' action='')
     div.form-group.form
       label(for='centre') Centre:
@@ -55,12 +58,6 @@ block content
         input#star1(type='radio', name='rating', value='1')
         label(for='star1', title="They didn't like it") 1 star
       button#fdbkSubmit.btn.btn-primary(type='submit') Submit  
-  if valErr
-    div
-      br
-      hr
-      p.valErr #{valErr}
-
   if errors 
    ul
     for error in errors
