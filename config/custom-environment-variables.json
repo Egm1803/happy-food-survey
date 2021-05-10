@@ -1,4 +1,4 @@
 {
-    "jwtPrivateKey": "survey_jwtPrivateKey",
-    "db":"survey_db"
+    "db":"survey_db",
+    "sessionSecret":"survey_sessionSecret"
 }

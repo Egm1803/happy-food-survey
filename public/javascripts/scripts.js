@@ -38,6 +38,31 @@ function setMinDate() {
         } 
     minDate = yyyy+'-'+mm+'-'+dd;
     document.getElementById("date").setAttribute("min", minDate); 
-    console.log('setMinDate worked, min date:', minDate);
     }; 
 
+    function logoutConfirm(event) {
+        event.preventDefault();
+        let logout = window.confirm("Do you really want to leave?"); 
+        if (logout) {location.href = '/api/logout'};
+    }
+    //check localstorage for active button, add class to active element,then clearStorage
+    $(document).ready(function () {
+        let activeEleIndex = localStorage.getItem('active');
+
+        if(activeEleIndex) {
+            $('.nav-button:nth-child('+activeEleIndex+')').addClass('active');
+        }
+
+        localStorage.clear();    
+    });
+
+    //onclick event listener for getting the index of clicked element
+    $(document).ready(function() {
+        $('.nav-button').click(function () {
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+            
+            let activeEleIndex = $(this).index() + 1;
+            localStorage.setItem('active', activeEleIndex);
+        });
+    });

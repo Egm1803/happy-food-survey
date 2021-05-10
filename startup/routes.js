@@ -7,7 +7,7 @@ var feedbacksRouter = require('../routes/feedbacks');
 var showResultsRouter = require('../routes/showResults');
 var centresRouter = require('../routes/centres');
 var classroomsRouter = require('../routes/classrooms');
-var changeUser = require('../routes/changeUser');
+var logoutRouter = require('../routes/logout');
 // const error = require('../middleware/error');
 
 module.exports = function (app) {
@@ -20,12 +20,12 @@ module.exports = function (app) {
 
     app.use('/', indexRouter);
     app.use('/api/users', usersRouter);
-    app.use('/api/changeUser', changeUser);
     app.use('/api/foods', foodsRouter);
     app.use('/api/feedbacks', feedbacksRouter);
     app.use('/api/showResults', showResultsRouter);
     app.use('/api/centres', centresRouter);
     app.use('/api/classrooms', classroomsRouter);
+    app.use('/api/logout', logoutRouter);
     // app.use(error);
     
 }

@@ -10,21 +10,20 @@ const educator = require('../middleware/educator');
 
 
 router.get('/', [auth,educator], asyncMiddleware(async function(req, res, next) {
-
   let foods = await Food.find({});
   let classrooms = await Classroom.find({});
   let centres = await Centre.find({});
 
-  //To hide the Fill Out The Form link in layout bar
-  let hidden = "hidden";
 
-  res.render('feedback_form', {food_list: foods, classroom_list: classrooms, centre_list: centres, user: req.user.name, hidden});
+  res.render('feedback_form', {food_list: foods, classroom_list: classrooms, centre_list: centres, user: req.session.user.name});
 
 }));
 
 router.post('/', [auth,educator], asyncMiddleware(async function(req, res, next) {
-  //To hide the Fill Out The Form link in layout bar
-  let hidden = "hidden";
+  
+
+
+
 
   let foods = await Food.find({});
   let classrooms = await Classroom.find({});
@@ -32,12 +31,11 @@ router.post('/', [auth,educator], asyncMiddleware(async function(req, res, next)
   const { error } = joiSchema.validate(req.body); 
    
   if (error) return res.render('feedback_form',{
-    user: req.user.name, 
+    user: req.session.user.name, 
     food_list: foods, 
     classroom_list: classrooms, 
     centre_list: centres, 
-    valErr: error.details[0].message,
-    hidden
+    valErr: error.details[0].message
   });
   //check if feedback exists
   let duplicateFeedback = await Feedback.findOne({     
@@ -47,12 +45,11 @@ router.post('/', [auth,educator], asyncMiddleware(async function(req, res, next)
   });
 
   if (duplicateFeedback) return res.render('feedback_form',{
-    user: req.user.name, 
+    user: req.session.user.name, 
     food_list: foods, 
     classroom_list: classrooms, 
     centre_list: centres, 
-    valErr: 'This room has already filled the form for that day.',
-    hidden
+    valErr: 'This room has already filled the form for that day.'
   });
 
   let feedback = new Feedback({
@@ -64,15 +61,18 @@ router.post('/', [auth,educator], asyncMiddleware(async function(req, res, next)
     howManyFinished: req.body.howManyFinished,
     rating: req.body.rating
   });
+  
+  //send local to show the success message
+  let success = true;
 
   feedback = await feedback.save();
 
   res.render('feedback_form',{
-    user: req.user.name, 
+    user: req.session.user.name, 
     food_list: foods, 
     classroom_list: classrooms, 
     centre_list: centres,
-    hidden
+    success
   });
 }));
 

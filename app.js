@@ -7,6 +7,9 @@ var path = require('path');
 // var cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const config = require('config');
+const session = require('express-session');
+
+
 const app = express();
 
 
@@ -50,10 +53,10 @@ process.on('unhandledRejection', (ex)=>{
 });
 //loggers end
 
-//JWT
-if(!config.get('jwtPrivateKey')) {
-  console.log('FATAL ERROR: jwtPrivateKey is not defined! Exiting process...');
-  logger.log('FATAL ERROR: jwtPrivateKey is not defined! Exiting process...');
+// check session secret
+if(!config.get('sessionSecret')) {
+  console.log('FATAL ERROR: sessionSecret is not defined! Exiting process...');
+  logger.log('FATAL ERROR: sessionSecret is not defined! Exiting process...');
   process.exit(1);
 };
 
@@ -66,12 +69,33 @@ app.set('view engine', 'pug');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-// app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+//create session
+app.use(session({
+  key: 'my_session',
+  secret: config.get('sessionSecret'),
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+      maxAge: 60 * 24 * 60 * 60 * 1000,//60 DAYS
+      httpOnly: true,
+      secure: false 
+  }
+}));
 
 require('./startup/logging')(app);
 require('./startup/routes')(app);
 require('./startup/prod')(app);
+
+// This middleware will check if user's cookie is still saved in browser and user is not set, then automatically log the user out.
+// This usually happens when you stop your express server after login, your cookie still remains saved in the browser.
+app.use((req, res, next) => {
+  if (req.cookies.my_session && !req.session.user) {
+      res.clearCookie('my_session');        
+  }
+  next();
+});
 
 //DB connection
 const db = config.get('db');
@@ -97,7 +121,6 @@ app.use(function(err, req, res, next) {
     res.render('error_redirect');
   } else {
     res.status(err.status || 500);
-    res.render('error');
   }
 });
 

@@ -1,20 +1,13 @@
 var express = require('express');
 var router = express.Router();
-const jwt = require('jsonwebtoken');
 const config = require('config');
+var session = require('express-session')
 
-function auth(req, res, next) {
-    const token = req.cookies.rememberme;
+module.exports = function (req, res, next) {
 
-    if (!token)  {
+    if (!req.session.user || !req.cookies.my_session)  {
         res.redirect(config.get('home'));
         return;
-    };
-
-    const decoded = jwt.verify(token, config.get('jwtPrivateKey'));
-    req.user = decoded;
+    }else if (req.session.user && req.cookies.my_session) next();
     
-    next();
 }
-
-module.exports = auth;

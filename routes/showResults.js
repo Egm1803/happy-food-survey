@@ -11,6 +11,7 @@ const manager = require('../middleware/manager');
 //const error = require('../middleware/errorMiddleware');
 
 router.get('/', [auth,manager], asyncMiddleware(async function(req, res, next) {
+    
     //throw new Error('fake error');
     //aggregate for all centers' results:
     let feedbackList = await Feedback.aggregate(
@@ -44,7 +45,8 @@ router.get('/', [auth,manager], asyncMiddleware(async function(req, res, next) {
     );
 
     let centres = await Centre.find({});
-    res.render('show_results',{title: 'Results of all centres', user: req.user.name, feedback_list: feedbackList, centre_list: centres});
+    
+    res.render('show_results',{title: 'Results of all centres', user: req.session.user.name, feedback_list: feedbackList, centre_list: centres});
     
 }));
 
@@ -96,7 +98,7 @@ router.post('/', [auth,manager], asyncMiddleware( async function(req, res, next)
     );
     
     let centres = await Centre.find({});  
-    res.render('show_results',{selectedCentreId: req.body.centre, user: req.user.name, feedback_list: feedbackList, centre_list: centres});
+    res.render('show_results',{selectedCentreId: req.body.centre, user: req.session.user.name, feedback_list: feedbackList, centre_list: centres});
     
 }));
 

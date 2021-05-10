@@ -9,7 +9,7 @@ const admin = require('../middleware/admin');
 
 router.get('/', [auth,admin], asyncMiddleware(async function(req, res, next) {
 
-    res.render('add_food_form',{title: 'Add Food', user: req.user.name});
+    res.render('add_food_form',{title: 'Add Food', user: req.session.user.name});
     
 }));
 
@@ -18,7 +18,7 @@ router.post('/', [auth,admin], asyncMiddleware(async function(req, res, next) {
 
     const { error } = joiSchema.validate(req.body); 
    
-    if (error) return res.render('add_food_form',{title: 'Add Food', user: req.user.name, valErr: error.details[0].message});
+    if (error) return res.render('add_food_form',{title: 'Add Food', user: req.session.user.name, valErr: error.details[0].message});
 
    
     let food = new Food({ 
@@ -30,7 +30,7 @@ router.post('/', [auth,admin], asyncMiddleware(async function(req, res, next) {
     });
     food = await food.save();
      
-    res.render('add_food_form',{title: 'Add Food', user: req.user.name, food: food.name});
+    res.render('add_food_form',{title: 'Add Food', user: req.session.user.name, food: food.name});
 }));
 
 module.exports = router;

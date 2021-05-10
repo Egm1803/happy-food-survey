@@ -6,6 +6,9 @@ block content
   if valErr
     div.valErr.alert.alert-danger
       p Failed to submit: #{valErr}
+  if success
+    div.alert.alert-success
+      p Form has been submitted!     
   form(method='POST' action='')
     div.form-group.form
       label(for='centre') Centre:

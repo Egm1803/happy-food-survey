@@ -10,7 +10,7 @@ router.get('/', [auth,admin], asyncMiddleware(async function(req, res, next) {
 
     let classrooms = await Classroom.find({});
 
-    res.render('centre_form',{title: 'Add centre', classroom_list: classrooms , user: req.user.name});
+    res.render('centre_form',{title: 'Add centre', classroom_list: classrooms , user: req.session.user.name});
 }));
 
 router.post('/', [auth,admin], asyncMiddleware( async function(req, res, next) {
@@ -19,7 +19,7 @@ router.post('/', [auth,admin], asyncMiddleware( async function(req, res, next) {
 
     const { error } = joiSchema.validate(req.body); 
 
-    if (error) return res.render('centre_form',{title: 'Add centre', classroom_list: classrooms, user: req.user.name, valErr: error.details[0].message});
+    if (error) return res.render('centre_form',{title: 'Add centre', classroom_list: classrooms, user: req.session.user.name, valErr: error.details[0].message});
     
     let centre = new Centre({ 
         name: req.body.name,
@@ -28,7 +28,7 @@ router.post('/', [auth,admin], asyncMiddleware( async function(req, res, next) {
 
     centre = await centre.save();
 
-    res.render('centre_form',{title: 'Add centre', classroom_list: classrooms, centre: centre, user: req.user.name});
+    res.render('centre_form',{title: 'Add centre', classroom_list: classrooms, centre: centre, user: req.session.user.name});
 }));
 
 module.exports = router;
