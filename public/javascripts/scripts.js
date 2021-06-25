@@ -1,3 +1,17 @@
+//AJAX TEST
+function loadDoc() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        console.log(this.response);
+        document.getElementById("ajaxtest").innerHTML =
+        this.responseText;
+      }
+    };
+    xhttp.open("POST", "http://localhost:3000/api/feedbacks/ajax", true);
+    xhttp.send()  
+}
+
 //Set min and max date: 6 months prior - today
 function setMaxDate() {
     var today = new Date();

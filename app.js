@@ -102,12 +102,13 @@ const db = config.get('db');
   mongoose.connect(db, {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
     .then(() => console.log(`Connected to ${db}...`));
 
-
+// FIX 404 ERROR HANDLING
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+// app.use(function(req, res, next) {
+//   next(createError(404));
+// });
 // ERROR HANDLER
+
 app.use(function(err, req, res, next) {
   //log error with winston
   logger.error({message: err.message, level: err.level, meta: err});

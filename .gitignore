@@ -1,5 +1,5 @@
 node_modules/
 coverage/
-./combined.log
-./error.log
+combined.log
+error.log
 startup/access.log
