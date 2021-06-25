@@ -72,16 +72,5 @@ router.post('/', [auth,educator], asyncMiddleware(async function(req, res, next)
   });
 }));
 
-//FOR AJAX TEST
-router.post('/ajax', [auth,educator], asyncMiddleware(async function(req, res, next) {
-  let foods = await Food.find({});
-  let classrooms = await Classroom.find({});
-  let centres = await Centre.find({});
-
-  
-  //res.render('feedback_form', { food_list: foods, classroom_list: classrooms, centre_list: centres, user: req.session.user.name});
-  res.send(centres);
-
-}));
 
 module.exports = router;
