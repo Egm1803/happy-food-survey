@@ -9,7 +9,6 @@ const admin = require('../middleware/admin');
 
 router.get('/', [auth,admin], asyncMiddleware( async function(req, res, next) {
     let userList = await User.find().select('name');
-    console.log(userList);
 
     res.render('users',{title: 'Add User', user: req.session.user.name, userList });
     

@@ -4,10 +4,9 @@ var session = require('express-session');
 
 
 module.exports = function (req, res, next) {
-    
     if (req.session.user.name==='Manager' || req.session.user.name==='Admin')  return next();
    
-    if (req.session.user.name!=='Educator') return res.redirect(config.get('changeUser'));
+    if (req.session.user.name!=='Educator') return res.redirect('/');
     
     next();
 }

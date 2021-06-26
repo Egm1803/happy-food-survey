@@ -66,9 +66,18 @@ label {
 .valErr {
   clear: left;
 }
+/* anchor buttons styling */
 
+.flex-list{
+  display: flex;
+  justify-content: space-between;
+}
+a.btn {
+  float: right;
+}
 
 /*starRating*/
+
 .starRating {
   float:left;
   clear:right;

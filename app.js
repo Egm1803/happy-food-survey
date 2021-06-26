@@ -8,6 +8,7 @@ var path = require('path');
 const mongoose = require('mongoose');
 const config = require('config');
 const session = require('express-session');
+var MongoDBStore = require('connect-mongodb-session')(session);
 
 
 const app = express();
@@ -71,17 +72,22 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-//create session
+//create and store sessions in DB
+const store = new MongoDBStore({
+  uri: config.get('db'),
+  collection: 'mySessions'
+});
 app.use(session({
   key: 'my_session',
   secret: config.get('sessionSecret'),
-  resave: false,
-  saveUninitialized: false,
+  resave: true,
+  saveUninitialized: true,
   cookie: {
       maxAge: 60 * 24 * 60 * 60 * 1000,//60 DAYS
       httpOnly: true,
       secure: false 
-  }
+  },
+  store: store
 }));
 
 require('./startup/logging')(app);

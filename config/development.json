@@ -1,5 +1,3 @@
 {
-  "db": "mongodb://localhost/generated-feedback-app",
-  "home":"http://localhost:3000/",
-  "changeUser":"http://localhost:3000/api/changeuser"
+  "db": "mongodb://localhost/generated-feedback-app"
 }
