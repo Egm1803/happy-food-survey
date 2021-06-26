@@ -4012,3 +4012,78 @@
   service: 'user-service',
   timestamp: '2021-05-20T11:38:16.686Z'
 }
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\users.pug:17:1\n' +
+    '    15|   ul \r\n' +
+    '    16|     for u in userList \r\n' +
+    '  > 17|     li #{user}\r\n' +
+    '--------^\n' +
+    '    18|   if newUser\r\n' +
+    '    19|     hr\r\n' +
+    '    20|     h4 "#{newUser}" added.\r\n' +
+    '\n' +
+    'expected "indent", but got "newline"',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\users.pug:17:1
+      15|   ul 
+      16|     for u in userList 
+    > 17|     li #{user}
+  --------^
+      18|   if newUser
+      19|     hr
+      20|     h4 "#{newUser}" added.
+  
+  expected "indent", but got "newline"
+      at makeError (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-error\index.js:34:13)
+      at Parser.error (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-parser\index.js:56:15)
+      at Parser.expect (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-parser\index.js:140:12)
+      at Parser.block (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-parser\index.js:1065:20)
+      at Parser.parseEach (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-parser\index.js:787:19)
+      at Parser.parseExpr (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-parser\index.js:250:21)
+      at Parser.block (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-parser\index.js:1073:25)
+      at Parser.tag (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-parser\index.js:1261:24)
+      at Parser.parseTag (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-parser\index.js:1126:17)
+      at Parser.parseExpr (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-parser\index.js:222:21)
+      at Parser.block (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-parser\index.js:1073:25)
+      at Parser.parseBlock (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-parser\index.js:843:16)
+      at Parser.parseExpr (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-parser\index.js:226:21)
+      at Parser.parse (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-parser\index.js:115:25)
+      at parse (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-parser\index.js:12:20)
+      at Object.parse (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:137:11) {
+    code: 'PUG:INVALID_TOKEN',
+    msg: 'expected "indent", but got "newline"',
+    line: 17,
+    column: 1,
+    filename: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\users.pug',
+    src: 'extends layout\r\n' +
+      '\r\n' +
+      'block content\r\n' +
+      '  h1 #{title}\r\n' +
+      '  hr\r\n' +
+      "  form(method='POST' action='')\r\n" +
+      '    div.form-group.form\r\n' +
+      "      label(for='name') Username:\r\n" +
+      "      input#name.form-control(type='text',  name='name', required)\r\n" +
+      "      label(for='password') Password:\r\n" +
+      "      input#name.form-control(type='text',  name='password', required)\r\n" +
+      '      br\r\n' +
+      "    button.btn.btn-primary(type='submit') Add User\r\n" +
+      '  hr\r\n' +
+      '  ul \r\n' +
+      '    for u in userList \r\n' +
+      '    li #{user}\r\n' +
+      '  if newUser\r\n' +
+      '    hr\r\n' +
+      '    h4 "#{newUser}" added.\r\n' +
+      '  if authErr\r\n' +
+      '    hr\r\n' +
+      '    h4 #{authErr}\r\n' +
+      '  if errors\r\n' +
+      '    ul\r\n' +
+      '      for error in errors\r\n' +
+      '          li!= error.msg',
+    toJSON: [Function]
+  },
+  service: 'user-service',
+  timestamp: '2021-06-25T13:42:44.372Z'
+}

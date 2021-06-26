@@ -15,7 +15,7 @@ router.get('/', asyncMiddleware(async function(req, res, next) {
     if(req.session.user) {
       currentUser = req.session.user.name;
     }
-    //To hide the Fill Out The Form link in layout bar
+    //currentUser is also used to hide the Fill Out The Form link in layout bar
     res.render('index',{user: currentUser});
  
 }));
