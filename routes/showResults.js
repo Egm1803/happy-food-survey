@@ -12,7 +12,6 @@ const manager = require('../middleware/manager');
 
 router.get('/', [auth,manager], asyncMiddleware(async function(req, res, next) {
     
-    //throw new Error('fake error');
     //aggregate for all centers' results:
     let feedbackList = await Feedback.aggregate(
         [
@@ -55,7 +54,6 @@ router.post('/', [auth,manager], asyncMiddleware( async function(req, res, next)
     
     let feedbackList = await Feedback.aggregate(
         [
-
             {
                 $lookup: {
                     from: "foods",

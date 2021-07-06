@@ -1,43 +1,76 @@
 extends layout
 
 block content
-  h1 #{title}
+  h1 #{foodToEdit ? `Editing ${foodToEdit.name}` : 'Add new food item'}:
   hr
-  form(method='POST' action='')
+  form(method='POST' action=`/api/foods/${foodToEdit ? foodToEdit._id : ''}`)
     div.form-group.form
       label(for='name') Food:
-      input#name.form-control(type='text', placeholder='Curry, risotto etc.', name='name', required )
+      input#name.form-control(value=`${foodToEdit ? foodToEdit.name : ''}` type='text' placeholder='Curry, risotto etc.', name='name', required )
       label(for='week') Week:
       select#week.form-control(type='select', placeholder='select week', name='week',required )
-        option(value="" disabled selected) -- Select --
-        option(value='1') Week 1
-        option(value='2') Week 2
-        option(value='3') Week 3
-        option(value='4') Week 4
+        option(value='' disabled selected= !foodToEdit) -- Select --
+        option(value='1' selected= foodToEdit ? foodToEdit.week == 1 : false) Week 1
+        option(value='2' selected= foodToEdit ? foodToEdit.week == 2 : false) Week 2
+        option(value='3' selected= foodToEdit ? foodToEdit.week == 3 : false) Week 3
+        option(value='4' selected= foodToEdit ? foodToEdit.week == 4 : false) Week 4
       label(for='day') Day:
       select#day.form-control(type='select', placeholder='select day', name='day',required )
-        option(value="" disabled selected ) -- Select --
-        option(value='Monday') Monday
-        option(value='Tuesday') Tuesday
-        option(value='Wednesday') Wednesday
-        option(value='Thursday') Thursday
-        option(value='Friday') Friday
+        option(value='' disabled selected= !foodToEdit ) -- Select --
+        option(value='Monday' selected= foodToEdit ? foodToEdit.day == "Monday" : false) Monday
+        option(value='Tuesday' selected= foodToEdit ? foodToEdit.day == "Tuesday" : false) Tuesday
+        option(value='Wednesday' selected= foodToEdit ? foodToEdit.day == "Wednesday" : false) Wednesday
+        option(value='Thursday' selected= foodToEdit ? foodToEdit.day == "Thursday" : false) Thursday
+        option(value='Friday' selected= foodToEdit ? foodToEdit.day == "Friday" : false) Friday
       label(for='meal') Meal:
       select#meal.form-control(type='select', placeholder='select meal', name='meal',required)
-        option(value="" disabled selected) -- Select --
-        option(value='Morning Tea') Morning Tea
-        option(value='Lunch') Lunch
-        option(value='Afternoon Tea') Afternoon Tea
-    button.btn.btn-primary(type='submit') Submit
+        option(value='' disabled selected= !foodToEdit) -- Select --
+        option(value='Morning Tea' selected= foodToEdit ?  foodToEdit.meal == "Morning Tea" : false) Morning Tea
+        option(value='Lunch' selected= foodToEdit ?  foodToEdit.meal == "Lunch" : false) Lunch
+        option(value='Afternoon Tea' selected= foodToEdit ?  foodToEdit.meal == "Afternoon Tea" : false) Afternoon Tea
+    button.btn.btn-primary(type='submit') Save
+    button.btn.btn-secondary(type='button' onclick='location.href="/api/foods"') Cancel
     if food
+      br
       hr
       p "#{food}" is added.
+    if deletedFood
+      hr
+      p "#{deletedFood}" is deleted.
     if valErr
-      div
-        br
-        hr
-        p.valErr #{valErr}
+      hr
+      p.valErr #{valErr}      
+    br
+    br
+    table.table.table-foods
+      tr
+        th Week
+        th Day
+        th Food
+      for foodItem in foods
+        tr
+          td #{foodItem.week}
+          td #{foodItem.day}
+          td #{foodItem.name}
+          td
+            a.btn.btn-primary(target='_self' href=`/api/foods/${foodItem._id}` )
+              svg.bi.bi-pencil(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')
+                path(d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z')  
+            a.btn.btn-danger( data-foodItemId=foodItem._id data-foodName=foodItem.name onclick='deleteConfirm(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )
+              svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')
+                path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')
+                path(fill-rule='evenodd' d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z')
+  #ModalCenter.modal.fade.bd-modal-sm(tabindex='-1' role='dialog' aria-labelledby='ModalCenterTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.modal-sm(role='document')
+      .modal-content
+        .modal-header
+          button.close(type='button' data-dismiss='modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+        .modal-body#modal-message
+        .modal-footer
+          button.btn.btn-secondary(type='button' data-dismiss='modal') Cancel
+          a.btn.btn-danger#confirm-delete-btn(target='_self') Delete
   if errors 
-   ul
-    for error in errors
-     li!= error.msg
+    ul
+      for error in errors
+        li!= error.msg

@@ -66,15 +66,25 @@ label {
 .valErr {
   clear: left;
 }
-/* anchor buttons styling */
 
+/* flex list on users page */
 .flex-list{
   display: flex;
   justify-content: space-between;
 }
-a.btn {
+.btn {
+  margin-right: 3px;
+  margin-left: 3px;
+}
+/* anchor buttons styling */
+a.btn.edit-btn {
   float: right;
 }
+
+.table.table-foods {
+  max-width: 55rem;
+}
+
 
 /*starRating*/
 

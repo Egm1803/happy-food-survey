@@ -10,29 +10,37 @@ const admin = require('../middleware/admin');
 router.get('/', [auth,admin], asyncMiddleware( async function(req, res, next) {
     let userList = await User.find().select('name');
 
-    res.render('users',{title: 'Add User', user: req.session.user.name, userList });
+    res.render('users',{user: req.session.user.name, userList });
     
 }));
 
-/* POST new user */
-router.post('/', [auth,admin], asyncMiddleware( async function(req, res, next) {
-    const { error } = joiSchema.validate(req.body);    
-    if (error) return res.render('users',{title: 'Add User',user: req.session.user.name, valErr: error.details[0].message});
+router.get('/:user', [auth,admin], asyncMiddleware( async function(req, res, next) {
 
-    let user = await User.findOne({name: req.body.name});
-    if (user) return res.render('users',{title: 'Add User', authErr: "This user already exists.",user: req.session.user.name });
+    res.render('users',{roleToEdit: req.params.user });
+    
+}));
+
+/* Change user password */
+router.post('/:user', [auth,admin], asyncMiddleware( async function(req, res, next) {
+
+    let user = await User.findOne({name: req.params.user});
+    if (!user) return res.render('users',{authErr: "Invalid username or password" });
+    
+    
+    const validPassword = await bcrypt.compare(req.body.oldPassword, user.password);
+    if (!validPassword) return res.render('users',{authErr: "Invalid username or password" });
+
+
+    if (req.body.newPassword !== req.body.newPasswordSecond) return res.render('users',{authErr: "New passwords don't match" });
 
     const salt = await bcrypt.genSalt(10);
-    const hashed = await bcrypt.hash(req.body.password, salt);
-
-    user = new User({ 
-        name: req.body.name,
-        password: hashed
-    });
+    const hashed = await bcrypt.hash(req.body.newPassword, salt);
+    
+    user.password = hashed;
     
     user = await user.save();
-     
-    res.render('users',{title: 'Add User', user: req.session.user.name, newUser: req.body.name});
+    
+    res.render('users',{title: 'Add User', user: req.session.user.name});
 }));
 
 module.exports = router;

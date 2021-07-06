@@ -19,7 +19,7 @@ html(lang='en')
                 li#user-info Logged in as "#{user}"
                 a.nav-button(href='/')
                   li Change User
-                a(href='/' onclick='logoutConfirm(event)')
+                a(href='/' onclick='logoutConfirm(event,)')
                   li Logout
                 a.nav-button(href='/api/feedbacks')
                   li Fill Out The Form
@@ -28,12 +28,12 @@ html(lang='en')
                     li Results
                 if (user==='Admin')                        
                   a.nav-button(href='/api/users')
-                    li Add User
+                    li User Roles
                   a.nav-button(href='/api/foods')
-                    li Add Food
+                    li Edit Foods
                   a.nav-button(href='/api/centres')
-                    li Add Centre
+                    li Edit Centres
                   a.nav-button(href='/api/classrooms')
-                    li Add Classroom
+                    li Edit Classrooms
         div(class='col-sm-9')
           block content
