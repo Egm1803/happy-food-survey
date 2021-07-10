@@ -95,7 +95,7 @@ router.get('/:_id/delete', [auth,admin,validateObjectId], asyncMiddleware(async 
 
         return res.render('add_food_form',{user: req.session.user.name, foods, valErr: "Can't find the food you are looking for." });
     }
-
+// This aggregation method is to find and delete all feedbacks related to the food item which is to be deleted.
     const ObjectId = mongoose.Types.ObjectId; 
     let foodTodelete = await Food.aggregate([
         { 

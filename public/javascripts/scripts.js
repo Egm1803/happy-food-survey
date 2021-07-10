@@ -40,45 +40,69 @@ function setMinDate() {
         } 
     minDate = yyyy+'-'+mm+'-'+dd;
     document.getElementById("date").setAttribute("min", minDate); 
-    }; 
+}; 
 
-    //confirm logout
-    function logoutConfirm(event) {
-        event.preventDefault();
-        let logout = window.confirm("Do you really want to leave?"); 
-        if (logout) {location.href = '/api/logout'};
+//confirm logout
+function logoutConfirm(event) {
+    event.preventDefault();
+    let logout = window.confirm("Do you really want to leave?"); 
+    if (logout) {location.href = '/api/logout'};
+}
+
+//confirm delete food on modal
+function deleteConfirm(event,self) {
+    //get _id from html data to put it on delete button url string
+    let id = self.getAttribute("data-foodItemId");
+    let ele = document.getElementById("confirm-delete-btn")
+    ele.href = `/api/foods/${id}/delete`;
+    //set modal message
+    let foodName = self.getAttribute("data-foodName");
+    let msg = `Are you sure you want to delete ${foodName}? <br> All feedback history related to this food item will be lost.`      
+    document.getElementById("modal-message").innerHTML= msg;
+}
+//confirm delete centre on modal
+function deleteConfirmCentre(event,self) {
+    //get _id from html data to put it on delete button url string
+    let id = self.getAttribute("data-centreId");
+    let ele = document.getElementById("confirm-delete-btn")
+    ele.href = `/api/centres/${id}/delete`;
+    //set modal message
+    let centreName = self.getAttribute("data-centreName");
+    let msg = `Are you sure you want to delete ${centreName}?`      
+    document.getElementById("modal-message").innerHTML= msg;
+}
+
+//confirm delete classroom on modal
+function deleteConfirmClassroom(event,self) {
+    //get _id from html data to put it on delete button url string
+    let id = self.getAttribute("data-classroomId");
+    let ele = document.getElementById("confirm-delete-btn")
+    ele.href = `/api/classrooms/${id}/delete`;
+    //set modal message
+    let classroomName = self.getAttribute("data-classroomName");
+    let msg = `Are you sure you want to delete ${classroomName}?`
+    console.log(msg);     
+    document.getElementById("modal-message").innerHTML= msg;
+}
+
+//check localstorage for active button, add class to active element,then clearStorage
+$(document).ready(function () {
+    let activeEleIndex = localStorage.getItem('active');
+
+    if(activeEleIndex) {
+        $('.nav-button:nth-child('+activeEleIndex+')').addClass('active');
     }
 
-    //confirm delete food on modal
-    function deleteConfirm(event,self) {
-        //get _id from html data to put it on delete button url string
-        let id = self.getAttribute("data-foodItemId");
-        let ele = document.getElementById("confirm-delete-btn")
-        ele.href = `/api/foods/${id}/delete`;
-        //set modal message
-        let foodName = self.getAttribute("data-foodName");
-        let msg = `Are you sure you want to delete ${foodName}? <br> All feedback history related to this food item will be lost.`      
-        document.getElementById("modal-message").innerHTML= msg;
-    }
+    localStorage.clear();    
+});
 
-    //check localstorage for active button, add class to active element,then clearStorage
-    $(document).ready(function () {
-        let activeEleIndex = localStorage.getItem('active');
-
-        if(activeEleIndex) {
-            $('.nav-button:nth-child('+activeEleIndex+')').addClass('active');
-        }
-
-        localStorage.clear();    
+//onclick event listener for getting the index of clicked element , for highlighting the last selected item on layout
+$(document).ready(function() {
+    $('.nav-button').click(function () {
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+        
+        let activeEleIndex = $(this).index() + 1;
+        localStorage.setItem('active', activeEleIndex);
     });
-
-    //onclick event listener for getting the index of clicked element , for highlighting the last selected item on layout
-    $(document).ready(function() {
-        $('.nav-button').click(function () {
-            $(this).siblings().removeClass('active');
-            $(this).addClass('active');
-            
-            let activeEleIndex = $(this).index() + 1;
-            localStorage.setItem('active', activeEleIndex);
-        });
-    });
+});

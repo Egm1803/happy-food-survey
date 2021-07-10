@@ -13,14 +13,14 @@ router.get('/', [auth,admin], asyncMiddleware( async function(req, res, next) {
     res.render('users',{user: req.session.user.name, userList });
     
 }));
-
+// Get user edit screen
 router.get('/:user', [auth,admin], asyncMiddleware( async function(req, res, next) {
-
-    res.render('users',{roleToEdit: req.params.user });
+    let userList = await User.find().select('name');
+    res.render('users',{userList ,user: req.session.user.name, roleToEdit: req.params.user });
     
 }));
 
-/* Change user password */
+// Change user password
 router.post('/:user', [auth,admin], asyncMiddleware( async function(req, res, next) {
 
     let user = await User.findOne({name: req.params.user});
@@ -40,7 +40,7 @@ router.post('/:user', [auth,admin], asyncMiddleware( async function(req, res, ne
     
     user = await user.save();
     
-    res.render('users',{title: 'Add User', user: req.session.user.name});
+    res.render('users',{ user: req.session.user.name});
 }));
 
 module.exports = router;
