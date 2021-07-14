@@ -7,7 +7,8 @@ block content
     div.form-group.form
       label(for='name') Classroom name:
       input#name.form-control(type='text', placeholder='i.e Wattles' name='name' value=(classroomToEdit ? classroomToEdit.name : ''), required)
-    button.btn.btn-primary(type='submit' onclick='location.href="/api/classrooms"') Submit
+    button.btn.btn-primary(type='submit' onclick="location.href=`/api/classrooms/${classroomToEdit ? classroomToEdit._id : '' }`") Submit
+    button.btn.btn-secondary(type='button' onclick='location.href="/api/classrooms"') Cancel
   br
   br  
   if classroom

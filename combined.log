@@ -7741,3 +7741,1577 @@
   service: 'user-service',
   timestamp: '2021-07-05T09:13:09.660Z'
 }
+{
+  message: 'Food is not defined',
+  level: '\u001b[31merror\u001b[39m',
+  meta: ReferenceError: Food is not defined
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:38:23
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:19
+      at newFn (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express-async-errors\index.js:16:20)
+      at Layer.handle [as handle_request] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\route.js:137:13)
+      at module.exports (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\validateObjectId.js:7:3)
+      at newFn (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express-async-errors\index.js:16:20)
+      at Layer.handle [as handle_request] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\route.js:137:13)
+      at module.exports (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\admin.js:7:5)
+      at newFn (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express-async-errors\index.js:16:20)
+      at Layer.handle [as handle_request] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\route.js:137:13)
+      at module.exports (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\auth.js:10:59)
+      at newFn (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express-async-errors\index.js:16:20)
+      at Layer.handle [as handle_request] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\layer.js:95:5),
+  service: 'user-service',
+  timestamp: '2021-07-08T12:18:03.571Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:32\n' +
+    '    30|     tr\r\n' +
+    '    31|       th Centre\r\n' +
+    '  > 32|     for centre in centres\r\n' +
+    '    33|       tr\r\n' +
+    '    34|         td #{centre.name}\r\n' +
+    '    35|         td\r\n' +
+    '\n' +
+    "Cannot read property 'length' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:32
+      30|     tr
+      31|       th Centre
+    > 32|     for centre in centres
+      33|       tr
+      34|         td #{centre.name}
+      35|         td
+  
+  Cannot read property 'length' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:224:32)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:287:4)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:348:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:32:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-08T12:23:02.202Z'
+}
+{
+  message: 'deletedCentre is not defined',
+  level: '\u001b[31merror\u001b[39m',
+  meta: ReferenceError: deletedCentre is not defined
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:49:24
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at runNextTicks (internal/process/task_queues.js:66:3)
+      at processImmediate (internal/timers.js:429:9)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13,
+  service: 'user-service',
+  timestamp: '2021-07-08T12:30:04.752Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\classroom_form.pug:27\n' +
+    '    25|     tr\r\n' +
+    '    26|       th Classroom\r\n' +
+    '  > 27|     for classroom in classrooms\r\n' +
+    '    28|       tr\r\n' +
+    '    29|         td #{classroom.name}\r\n' +
+    '    30|         td\r\n' +
+    '\n' +
+    "Cannot read property 'length' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\classroom_form.pug:27
+      25|     tr
+      26|       th Classroom
+    > 27|     for classroom in classrooms
+      28|       tr
+      29|         td #{classroom.name}
+      30|         td
+  
+  Cannot read property 'length' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:188:32)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:251:4)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:312:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\classrooms.js:38:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at runNextTicks (internal/process/task_queues.js:66:3)
+      at processImmediate (internal/timers.js:429:9)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\classroom_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-09T13:46:44.800Z'
+}
+{
+  message: 'Failed to lookup view "add_centre_form" in views directory "C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views"',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: Failed to lookup view "add_centre_form" in views directory "C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views"
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:580:17)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:42:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at runNextTicks (internal/process/task_queues.js:66:3)
+      at processImmediate (internal/timers.js:429:9)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    view: View {
+      defaultEngine: 'pug',
+      ext: '.pug',
+      name: 'add_centre_form',
+      root: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views',
+      engine: [Function],
+      path: undefined
+    }
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T11:51:08.103Z'
+}
+{
+  message: 'Failed to lookup view "add_centre_form" in views directory "C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views"',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: Failed to lookup view "add_centre_form" in views directory "C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views"
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:580:17)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:42:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at runNextTicks (internal/process/task_queues.js:66:3)
+      at processImmediate (internal/timers.js:429:9)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    view: View {
+      defaultEngine: 'pug',
+      ext: '.pug',
+      name: 'add_centre_form',
+      root: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views',
+      engine: [Function],
+      path: undefined
+    }
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T11:51:48.761Z'
+}
+{
+  message: 'Failed to lookup view "add_centre_form" in views directory "C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views"',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: Failed to lookup view "add_centre_form" in views directory "C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views"
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:580:17)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:42:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at runNextTicks (internal/process/task_queues.js:66:3)
+      at processImmediate (internal/timers.js:429:9)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    view: View {
+      defaultEngine: 'pug',
+      ext: '.pug',
+      name: 'add_centre_form',
+      root: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views',
+      engine: [Function],
+      path: undefined
+    }
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T11:52:20.921Z'
+}
+{
+  message: 'Failed to lookup view "add_centre_form" in views directory "C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views"',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: Failed to lookup view "add_centre_form" in views directory "C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views"
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:580:17)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:42:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at runNextTicks (internal/process/task_queues.js:66:3)
+      at processImmediate (internal/timers.js:429:9)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    view: View {
+      defaultEngine: 'pug',
+      ext: '.pug',
+      name: 'add_centre_form',
+      root: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views',
+      engine: [Function],
+      path: undefined
+    }
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T11:52:44.991Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:11\n' +
+    "    9|         input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required)\r\n" +
+    '    10|       br  \r\n' +
+    '  > 11|       for classroom in classroom_list\r\n' +
+    '    12|         div.checkbox-container\r\n' +
+    "    13|           input.classroom.form-check-input(type='checkbox', name='classroom' value= classroom.name)\r\n" +
+    "    14|           label.form-check-label(for='classroom') #{classroom.name}\r\n" +
+    '\n' +
+    "Cannot read property 'length' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:11
+      9|         input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required)
+      10|       br  
+    > 11|       for classroom in classroom_list
+      12|         div.checkbox-container
+      13|           input.classroom.form-check-input(type='checkbox', name='classroom' value= classroom.name)
+      14|           label.form-check-label(for='classroom') #{classroom.name}
+  
+  Cannot read property 'length' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:135:32)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:162:4)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:348:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:42:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at runNextTicks (internal/process/task_queues.js:66:3)
+      at processImmediate (internal/timers.js:429:9)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T11:53:04.677Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:13\n' +
+    '    11|       for classroom in classroom_list\r\n' +
+    '    12|         div.checkbox-container\r\n' +
+    "  > 13|           input.classroom.form-check-input(type='checkbox', name='classroom' value= classroom.name checked= centreToEdit.classroom.includes(classroom.name) ? true : false )\r\n" +
+    "    14|           label.form-check-label(for='classroom') #{classroom.name}\r\n" +
+    `    15|     button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\r\n` +
+    '    16|   br\r\n' +
+    '\n' +
+    "Cannot read property 'classroom' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:13
+      11|       for classroom in classroom_list
+      12|         div.checkbox-container
+    > 13|           input.classroom.form-check-input(type='checkbox', name='classroom' value= classroom.name checked= centreToEdit.classroom.includes(classroom.name) ? true : false )
+      14|           label.form-check-label(for='classroom') #{classroom.name}
+      15|     button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre
+      16|   br
+  
+  Cannot read property 'classroom' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:141:199)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:162:4)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:348:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T12:10:39.907Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:13\n' +
+    '    11|       for classroom in classroom_list\r\n' +
+    '    12|         div.checkbox-container\r\n' +
+    "  > 13|           input.classroom.form-check-input(type='checkbox', name='classroom' value= classroom.name checked= centreToEdit.classroom.includes(classroom.name) ? true : false )\r\n" +
+    "    14|           label.form-check-label(for='classroom') #{classroom.name}\r\n" +
+    `    15|     button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\r\n` +
+    '    16|   br\r\n' +
+    '\n' +
+    "Cannot read property 'classroom' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:13
+      11|       for classroom in classroom_list
+      12|         div.checkbox-container
+    > 13|           input.classroom.form-check-input(type='checkbox', name='classroom' value= classroom.name checked= centreToEdit.classroom.includes(classroom.name) ? true : false )
+      14|           label.form-check-label(for='classroom') #{classroom.name}
+      15|     button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre
+      16|   br
+  
+  Cannot read property 'classroom' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:141:199)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:162:4)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:348:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T12:12:40.981Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:13\n' +
+    '    11|       for classroom in classroom_list\r\n' +
+    '    12|         div.checkbox-container\r\n' +
+    "  > 13|           input.classroom.form-check-input(type='checkbox', name='classroom' value= classroom.name checked= centreToEdit.classroom.includes(classroom.name) ? true : false )\r\n" +
+    "    14|           label.form-check-label(for='classroom') #{classroom.name}\r\n" +
+    `    15|     button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\r\n` +
+    '    16|   br\r\n' +
+    '\n' +
+    "Cannot read property 'classroom' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:13
+      11|       for classroom in classroom_list
+      12|         div.checkbox-container
+    > 13|           input.classroom.form-check-input(type='checkbox', name='classroom' value= classroom.name checked= centreToEdit.classroom.includes(classroom.name) ? true : false )
+      14|           label.form-check-label(for='classroom') #{classroom.name}
+      15|     button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre
+      16|   br
+  
+  Cannot read property 'classroom' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:141:199)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:162:4)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:348:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T12:14:29.856Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:13\n' +
+    '    11|       for classroom in classroom_list\r\n' +
+    '    12|         div.checkbox-container\r\n' +
+    "  > 13|           input.classroom.form-check-input(type='checkbox', name='classroom' value= classroom.name checked= centreToEdit.classroom.includes(classroom.name) ? true : false )\r\n" +
+    "    14|           label.form-check-label(for='classroom') #{classroom.name}\r\n" +
+    `    15|     button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\r\n` +
+    '    16|   br\r\n' +
+    '\n' +
+    "Cannot read property 'classroom' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:13
+      11|       for classroom in classroom_list
+      12|         div.checkbox-container
+    > 13|           input.classroom.form-check-input(type='checkbox', name='classroom' value= classroom.name checked= centreToEdit.classroom.includes(classroom.name) ? true : false )
+      14|           label.form-check-label(for='classroom') #{classroom.name}
+      15|     button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre
+      16|   br
+  
+  Cannot read property 'classroom' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:141:199)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:162:4)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:348:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T12:16:34.937Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:13\n' +
+    '    11|       for classroom in classroom_list\r\n' +
+    '    12|         div.checkbox-container\r\n' +
+    "  > 13|           input.classroom.form-check-input(type='checkbox', name='classroom' value= classroom.name checked= centreToEdit.classroom.includes(classroom.name) ? true : false )\r\n" +
+    "    14|           label.form-check-label(for='classroom') #{classroom.name}\r\n" +
+    `    15|     button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\r\n` +
+    '    16|   br\r\n' +
+    '\n' +
+    "Cannot read property 'classroom' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:13
+      11|       for classroom in classroom_list
+      12|         div.checkbox-container
+    > 13|           input.classroom.form-check-input(type='checkbox', name='classroom' value= classroom.name checked= centreToEdit.classroom.includes(classroom.name) ? true : false )
+      14|           label.form-check-label(for='classroom') #{classroom.name}
+      15|     button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre
+      16|   br
+  
+  Cannot read property 'classroom' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:141:199)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:162:4)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:348:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T12:16:56.543Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:13\n' +
+    '    11|       for classroom in classroom_list\r\n' +
+    '    12|         div.checkbox-container\r\n' +
+    "  > 13|           input.classroom.form-check-input(type='checkbox', name='classroom' value= classroom.name checked= centreToEdit.classroom.includes(classroom.name) ? true : false )\r\n" +
+    "    14|           label.form-check-label(for='classroom') #{classroom.name}\r\n" +
+    `    15|     button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\r\n` +
+    '    16|   br\r\n' +
+    '\n' +
+    "Cannot read property 'classroom' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:13
+      11|       for classroom in classroom_list
+      12|         div.checkbox-container
+    > 13|           input.classroom.form-check-input(type='checkbox', name='classroom' value= classroom.name checked= centreToEdit.classroom.includes(classroom.name) ? true : false )
+      14|           label.form-check-label(for='classroom') #{classroom.name}
+      15|     button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre
+      16|   br
+  
+  Cannot read property 'classroom' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:141:199)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:162:4)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:348:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T12:17:00.126Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:14\n' +
+    '    12|         for classroom in classroom_list\r\n' +
+    '    13|           div.checkbox-container\r\n' +
+    "  > 14|             input.classroom.form-check-input( checked= centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\r\n" +
+    "    15|             label.form-check-label(for='classroom') #{classroom.name}\r\n" +
+    `    16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\r\n` +
+    '    17|   br\r\n' +
+    '\n' +
+    "Cannot read property 'classroom' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:14
+      12|         for classroom in classroom_list
+      13|           div.checkbox-container
+    > 14|             input.classroom.form-check-input( checked= centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )
+      15|             label.form-check-label(for='classroom') #{classroom.name}
+      16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre
+      17|   br
+  
+  Cannot read property 'classroom' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:143:113)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:164:4)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:350:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T12:25:57.484Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:14\n' +
+    '    12|         for classroom in classroom_list\r\n' +
+    '    13|           div.checkbox-container\r\n' +
+    "  > 14|             input.classroom.form-check-input( checked= centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\r\n" +
+    "    15|             label.form-check-label(for='classroom') #{classroom.name}\r\n" +
+    `    16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\r\n` +
+    '    17|   br\r\n' +
+    '\n' +
+    "Cannot read property 'classroom' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:14
+      12|         for classroom in classroom_list
+      13|           div.checkbox-container
+    > 14|             input.classroom.form-check-input( checked= centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )
+      15|             label.form-check-label(for='classroom') #{classroom.name}
+      16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre
+      17|   br
+  
+  Cannot read property 'classroom' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:143:113)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:164:4)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:350:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T12:27:58.484Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:14:56\n' +
+    '    12|         for classroom in classroom_list\n' +
+    '    13|           div.checkbox-container\n' +
+    "  > 14|             input.classroom.form-check-input( checked= if (centreToEdit) centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\n" +
+    '---------------------------------------------------------------^\n' +
+    "    15|             label.form-check-label(for='classroom') #{classroom.name}\n" +
+    `    16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\n` +
+    '    17|   br\n' +
+    '\n' +
+    'Syntax Error: Unexpected token',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:14:56
+      12|         for classroom in classroom_list
+      13|           div.checkbox-container
+    > 14|             input.classroom.form-check-input( checked= if (centreToEdit) centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )
+  ---------------------------------------------------------------^
+      15|             label.form-check-label(for='classroom') #{classroom.name}
+      16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre
+      17|   br
+  
+  Syntax Error: Unexpected token
+      at makeError (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-error\index.js:34:13)
+      at Lexer.error (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:62:15)
+      at Lexer.assertExpression (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:96:12)
+      at Lexer.attributeValue (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1423:10)
+      at Lexer.attribute (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1270:30)
+      at Lexer.attrs (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1449:20)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.advance (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1681:12)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.getTokens (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1701:12)
+      at lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:12:42)
+      at Object.lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:104:9)
+      at Function.loadString [as string] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-load\index.js:53:24)
+      at compileBody (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:82:18)
+      at Object.exports.compile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:267:16)
+      at handleTemplateCache (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:240:25) {
+    code: 'PUG:SYNTAX_ERROR',
+    msg: 'Syntax Error: Unexpected token',
+    line: 14,
+    column: 56,
+    filename: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug',
+    src: 'extends layout\n' +
+      '\n' +
+      'block content\n' +
+      '  h1 #{title}\n' +
+      '  hr\n' +
+      "  form.form(method='POST' action='')\n" +
+      '    div.form-group.form\n' +
+      "      label(for='name') Centre name:\n" +
+      "        input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required)\n" +
+      '      br  \n' +
+      '      if classroom_list\n' +
+      '        for classroom in classroom_list\n' +
+      '          div.checkbox-container\n' +
+      "            input.classroom.form-check-input( checked= if (centreToEdit) centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\n" +
+      "            label.form-check-label(for='classroom') #{classroom.name}\n" +
+      `      button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\n` +
+      '  br\n' +
+      '  br  \n' +
+      '  if centre\n' +
+      '    hr\n' +
+      '    p "#{centre.name}" added.\n' +
+      '  if valErr\n' +
+      '    div\n' +
+      '      br\n' +
+      '      hr\n' +
+      '      p.valErr #{valErr}\n' +
+      '  if deletedCentre\n' +
+      '    hr\n' +
+      '    p "#{deletedCentre}" is deleted.\n' +
+      '  table.table.table-foods\n' +
+      '    tr\n' +
+      '      th Centre\n' +
+      '    for centre in centres\n' +
+      '      tr\n' +
+      '        td #{centre.name}\n' +
+      '        td\n' +
+      "          a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )\n" +
+      "            svg.bi.bi-pencil(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\n" +
+      "              path(d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z')  \n" +
+      "          a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )\n" +
+      "            svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\n" +
+      "              path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')\n" +
+      "              path(fill-rule='evenodd' d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z')      \n" +
+      "  #ModalCenter.modal.fade.bd-modal-sm(tabindex='-1' role='dialog' aria-labelledby='ModalCenterTitle' aria-hidden='true')\n" +
+      "    .modal-dialog.modal-dialog-centered.modal-sm(role='document')\n" +
+      '      .modal-content\n' +
+      '        .modal-header\n' +
+      "          button.close(type='button' data-dismiss='modal' aria-label='Close')\n" +
+      "            span(aria-hidden='true') &times;\n" +
+      '        .modal-body#modal-message\n' +
+      '        .modal-footer\n' +
+      "          button.btn.btn-secondary(type='button' data-dismiss='modal') Cancel\n" +
+      "          a.btn.btn-danger#confirm-delete-btn(target='_self') Delete  \n" +
+      '  if errors \n' +
+      '   ul\n' +
+      '    for error in errors\n' +
+      '     li!= error.msg',
+    toJSON: [Function]
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T12:29:17.897Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:14:56\n' +
+    '    12|         for classroom in classroom_list\n' +
+    '    13|           div.checkbox-container\n' +
+    "  > 14|             input.classroom.form-check-input( checked= if centreToEdit centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\n" +
+    '---------------------------------------------------------------^\n' +
+    "    15|             label.form-check-label(for='classroom') #{classroom.name}\n" +
+    `    16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\n` +
+    '    17|   br\n' +
+    '\n' +
+    'Syntax Error: Unexpected token',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:14:56
+      12|         for classroom in classroom_list
+      13|           div.checkbox-container
+    > 14|             input.classroom.form-check-input( checked= if centreToEdit centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )
+  ---------------------------------------------------------------^
+      15|             label.form-check-label(for='classroom') #{classroom.name}
+      16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre
+      17|   br
+  
+  Syntax Error: Unexpected token
+      at makeError (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-error\index.js:34:13)
+      at Lexer.error (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:62:15)
+      at Lexer.assertExpression (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:96:12)
+      at Lexer.attributeValue (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1423:10)
+      at Lexer.attribute (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1270:30)
+      at Lexer.attrs (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1449:20)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.advance (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1681:12)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.getTokens (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1701:12)
+      at lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:12:42)
+      at Object.lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:104:9)
+      at Function.loadString [as string] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-load\index.js:53:24)
+      at compileBody (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:82:18)
+      at Object.exports.compile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:267:16)
+      at handleTemplateCache (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:240:25) {
+    code: 'PUG:SYNTAX_ERROR',
+    msg: 'Syntax Error: Unexpected token',
+    line: 14,
+    column: 56,
+    filename: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug',
+    src: 'extends layout\n' +
+      '\n' +
+      'block content\n' +
+      '  h1 #{title}\n' +
+      '  hr\n' +
+      "  form.form(method='POST' action='')\n" +
+      '    div.form-group.form\n' +
+      "      label(for='name') Centre name:\n" +
+      "        input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required)\n" +
+      '      br  \n' +
+      '      if classroom_list\n' +
+      '        for classroom in classroom_list\n' +
+      '          div.checkbox-container\n' +
+      "            input.classroom.form-check-input( checked= if centreToEdit centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\n" +
+      "            label.form-check-label(for='classroom') #{classroom.name}\n" +
+      `      button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\n` +
+      '  br\n' +
+      '  br  \n' +
+      '  if centre\n' +
+      '    hr\n' +
+      '    p "#{centre.name}" added.\n' +
+      '  if valErr\n' +
+      '    div\n' +
+      '      br\n' +
+      '      hr\n' +
+      '      p.valErr #{valErr}\n' +
+      '  if deletedCentre\n' +
+      '    hr\n' +
+      '    p "#{deletedCentre}" is deleted.\n' +
+      '  table.table.table-foods\n' +
+      '    tr\n' +
+      '      th Centre\n' +
+      '    for centre in centres\n' +
+      '      tr\n' +
+      '        td #{centre.name}\n' +
+      '        td\n' +
+      "          a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )\n" +
+      "            svg.bi.bi-pencil(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\n" +
+      "              path(d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z')  \n" +
+      "          a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )\n" +
+      "            svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\n" +
+      "              path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')\n" +
+      "              path(fill-rule='evenodd' d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z')      \n" +
+      "  #ModalCenter.modal.fade.bd-modal-sm(tabindex='-1' role='dialog' aria-labelledby='ModalCenterTitle' aria-hidden='true')\n" +
+      "    .modal-dialog.modal-dialog-centered.modal-sm(role='document')\n" +
+      '      .modal-content\n' +
+      '        .modal-header\n' +
+      "          button.close(type='button' data-dismiss='modal' aria-label='Close')\n" +
+      "            span(aria-hidden='true') &times;\n" +
+      '        .modal-body#modal-message\n' +
+      '        .modal-footer\n' +
+      "          button.btn.btn-secondary(type='button' data-dismiss='modal') Cancel\n" +
+      "          a.btn.btn-danger#confirm-delete-btn(target='_self') Delete  \n" +
+      '  if errors \n' +
+      '   ul\n' +
+      '    for error in errors\n' +
+      '     li!= error.msg',
+    toJSON: [Function]
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T12:30:28.872Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:14\n' +
+    '    12|         for classroom in classroom_list\r\n' +
+    '    13|           div.checkbox-container\r\n' +
+    "  > 14|             input.classroom.form-check-input( if (centreToEdit) checked=  centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\r\n" +
+    "    15|             label.form-check-label(for='classroom') #{classroom.name}\r\n" +
+    `    16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\r\n` +
+    '    17|   br\r\n' +
+    '\n' +
+    "Cannot read property 'classroom' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:14
+      12|         for classroom in classroom_list
+      13|           div.checkbox-container
+    > 14|             input.classroom.form-check-input( if (centreToEdit) checked=  centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )
+      15|             label.form-check-label(for='classroom') #{classroom.name}
+      16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre
+      17|   br
+  
+  Cannot read property 'classroom' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:143:191)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:164:4)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:350:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T12:32:34.036Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:14:70\n' +
+    '    12|         for classroom in classroom_list\n' +
+    '    13|           div.checkbox-container\n' +
+    "  > 14|             input.classroom.form-check-input( checked=  centreToEdit?.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\n" +
+    '-----------------------------------------------------------------------------^\n' +
+    "    15|             label.form-check-label(for='classroom') #{classroom.name}\n" +
+    `    16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\n` +
+    '    17|   br\n' +
+    '\n' +
+    'Syntax Error: Unexpected token',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:14:70
+      12|         for classroom in classroom_list
+      13|           div.checkbox-container
+    > 14|             input.classroom.form-check-input( checked=  centreToEdit?.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )
+  -----------------------------------------------------------------------------^
+      15|             label.form-check-label(for='classroom') #{classroom.name}
+      16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre
+      17|   br
+  
+  Syntax Error: Unexpected token
+      at makeError (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-error\index.js:34:13)
+      at Lexer.error (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:62:15)
+      at Lexer.assertExpression (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:96:12)
+      at Lexer.attributeValue (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1423:10)
+      at Lexer.attribute (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1270:30)
+      at Lexer.attrs (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1449:20)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.advance (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1681:12)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.getTokens (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1701:12)
+      at lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:12:42)
+      at Object.lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:104:9)
+      at Function.loadString [as string] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-load\index.js:53:24)
+      at compileBody (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:82:18)
+      at Object.exports.compile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:267:16)
+      at handleTemplateCache (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:240:25) {
+    code: 'PUG:SYNTAX_ERROR',
+    msg: 'Syntax Error: Unexpected token',
+    line: 14,
+    column: 70,
+    filename: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug',
+    src: 'extends layout\n' +
+      '\n' +
+      'block content\n' +
+      '  h1 #{title}\n' +
+      '  hr\n' +
+      "  form.form(method='POST' action='')\n" +
+      '    div.form-group.form\n' +
+      "      label(for='name') Centre name:\n" +
+      "        input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required)\n" +
+      '      br  \n' +
+      '      if classroom_list\n' +
+      '        for classroom in classroom_list\n' +
+      '          div.checkbox-container\n' +
+      "            input.classroom.form-check-input( checked=  centreToEdit?.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\n" +
+      "            label.form-check-label(for='classroom') #{classroom.name}\n" +
+      `      button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\n` +
+      '  br\n' +
+      '  br  \n' +
+      '  if centre\n' +
+      '    hr\n' +
+      '    p "#{centre.name}" added.\n' +
+      '  if valErr\n' +
+      '    div\n' +
+      '      br\n' +
+      '      hr\n' +
+      '      p.valErr #{valErr}\n' +
+      '  if deletedCentre\n' +
+      '    hr\n' +
+      '    p "#{deletedCentre}" is deleted.\n' +
+      '  table.table.table-foods\n' +
+      '    tr\n' +
+      '      th Centre\n' +
+      '    for centre in centres\n' +
+      '      tr\n' +
+      '        td #{centre.name}\n' +
+      '        td\n' +
+      "          a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )\n" +
+      "            svg.bi.bi-pencil(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\n" +
+      "              path(d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z')  \n" +
+      "          a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )\n" +
+      "            svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\n" +
+      "              path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')\n" +
+      "              path(fill-rule='evenodd' d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z')      \n" +
+      "  #ModalCenter.modal.fade.bd-modal-sm(tabindex='-1' role='dialog' aria-labelledby='ModalCenterTitle' aria-hidden='true')\n" +
+      "    .modal-dialog.modal-dialog-centered.modal-sm(role='document')\n" +
+      '      .modal-content\n' +
+      '        .modal-header\n' +
+      "          button.close(type='button' data-dismiss='modal' aria-label='Close')\n" +
+      "            span(aria-hidden='true') &times;\n" +
+      '        .modal-body#modal-message\n' +
+      '        .modal-footer\n' +
+      "          button.btn.btn-secondary(type='button' data-dismiss='modal') Cancel\n" +
+      "          a.btn.btn-danger#confirm-delete-btn(target='_self') Delete  \n" +
+      '  if errors \n' +
+      '   ul\n' +
+      '    for error in errors\n' +
+      '     li!= error.msg',
+    toJSON: [Function]
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T12:40:50.633Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:14:135\n' +
+    '    12|         for classroom in classroom_list\n' +
+    '    13|           div.checkbox-container\n' +
+    "  > 14|             input.classroom.form-check-input( checked= centreToEdit ?  centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\n" +
+    '----------------------------------------------------------------------------------------------------------------------------------------------^\n' +
+    "    15|             label.form-check-label(for='classroom') #{classroom.name}\n" +
+    `    16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\n` +
+    '    17|   br\n' +
+    '\n' +
+    'Syntax Error: Unexpected token',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:14:135
+      12|         for classroom in classroom_list
+      13|           div.checkbox-container
+    > 14|             input.classroom.form-check-input( checked= centreToEdit ?  centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )
+  ----------------------------------------------------------------------------------------------------------------------------------------------^
+      15|             label.form-check-label(for='classroom') #{classroom.name}
+      16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre
+      17|   br
+  
+  Syntax Error: Unexpected token
+      at makeError (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-error\index.js:34:13)
+      at Lexer.error (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:62:15)
+      at Lexer.assertExpression (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:96:12)
+      at Lexer.attributeValue (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1423:10)
+      at Lexer.attribute (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1270:30)
+      at Lexer.attrs (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1449:20)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.advance (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1681:12)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.getTokens (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1701:12)
+      at lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:12:42)
+      at Object.lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:104:9)
+      at Function.loadString [as string] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-load\index.js:53:24)
+      at compileBody (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:82:18)
+      at Object.exports.compile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:267:16)
+      at handleTemplateCache (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:240:25) {
+    code: 'PUG:SYNTAX_ERROR',
+    msg: 'Syntax Error: Unexpected token',
+    line: 14,
+    column: 135,
+    filename: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug',
+    src: 'extends layout\n' +
+      '\n' +
+      'block content\n' +
+      '  h1 #{title}\n' +
+      '  hr\n' +
+      "  form.form(method='POST' action='')\n" +
+      '    div.form-group.form\n' +
+      "      label(for='name') Centre name:\n" +
+      "        input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required)\n" +
+      '      br  \n' +
+      '      if classroom_list\n' +
+      '        for classroom in classroom_list\n' +
+      '          div.checkbox-container\n' +
+      "            input.classroom.form-check-input( checked= centreToEdit ?  centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\n" +
+      "            label.form-check-label(for='classroom') #{classroom.name}\n" +
+      `      button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\n` +
+      '  br\n' +
+      '  br  \n' +
+      '  if centre\n' +
+      '    hr\n' +
+      '    p "#{centre.name}" added.\n' +
+      '  if valErr\n' +
+      '    div\n' +
+      '      br\n' +
+      '      hr\n' +
+      '      p.valErr #{valErr}\n' +
+      '  if deletedCentre\n' +
+      '    hr\n' +
+      '    p "#{deletedCentre}" is deleted.\n' +
+      '  table.table.table-foods\n' +
+      '    tr\n' +
+      '      th Centre\n' +
+      '    for centre in centres\n' +
+      '      tr\n' +
+      '        td #{centre.name}\n' +
+      '        td\n' +
+      "          a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )\n" +
+      "            svg.bi.bi-pencil(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\n" +
+      "              path(d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z')  \n" +
+      "          a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )\n" +
+      "            svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\n" +
+      "              path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')\n" +
+      "              path(fill-rule='evenodd' d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z')      \n" +
+      "  #ModalCenter.modal.fade.bd-modal-sm(tabindex='-1' role='dialog' aria-labelledby='ModalCenterTitle' aria-hidden='true')\n" +
+      "    .modal-dialog.modal-dialog-centered.modal-sm(role='document')\n" +
+      '      .modal-content\n' +
+      '        .modal-header\n' +
+      "          button.close(type='button' data-dismiss='modal' aria-label='Close')\n" +
+      "            span(aria-hidden='true') &times;\n" +
+      '        .modal-body#modal-message\n' +
+      '        .modal-footer\n' +
+      "          button.btn.btn-secondary(type='button' data-dismiss='modal') Cancel\n" +
+      "          a.btn.btn-danger#confirm-delete-btn(target='_self') Delete  \n" +
+      '  if errors \n' +
+      '   ul\n' +
+      '    for error in errors\n' +
+      '     li!= error.msg',
+    toJSON: [Function]
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T12:45:53.371Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:14:72\n' +
+    '    12|         for classroom in classroom_list\n' +
+    '    13|           div.checkbox-container\n' +
+    `  > 14|             input.classroom.form-check-input( checked= !centreToEdit ? : "" : centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\n` +
+    '-------------------------------------------------------------------------------^\n' +
+    "    15|             label.form-check-label(for='classroom') #{classroom.name}\n" +
+    `    16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\n` +
+    '    17|   br\n' +
+    '\n' +
+    'Syntax Error: Unexpected token',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:14:72
+      12|         for classroom in classroom_list
+      13|           div.checkbox-container
+    > 14|             input.classroom.form-check-input( checked= !centreToEdit ? : "" : centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )
+  -------------------------------------------------------------------------------^
+      15|             label.form-check-label(for='classroom') #{classroom.name}
+      16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre
+      17|   br
+  
+  Syntax Error: Unexpected token
+      at makeError (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-error\index.js:34:13)
+      at Lexer.error (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:62:15)
+      at Lexer.assertExpression (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:96:12)
+      at Lexer.attributeValue (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1423:10)
+      at Lexer.attribute (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1270:30)
+      at Lexer.attrs (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1449:20)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.advance (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1681:12)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.getTokens (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1701:12)
+      at lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:12:42)
+      at Object.lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:104:9)
+      at Function.loadString [as string] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-load\index.js:53:24)
+      at compileBody (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:82:18)
+      at Object.exports.compile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:267:16)
+      at handleTemplateCache (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:240:25) {
+    code: 'PUG:SYNTAX_ERROR',
+    msg: 'Syntax Error: Unexpected token',
+    line: 14,
+    column: 72,
+    filename: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug',
+    src: 'extends layout\n' +
+      '\n' +
+      'block content\n' +
+      '  h1 #{title}\n' +
+      '  hr\n' +
+      "  form.form(method='POST' action='')\n" +
+      '    div.form-group.form\n' +
+      "      label(for='name') Centre name:\n" +
+      "        input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required)\n" +
+      '      br  \n' +
+      '      if classroom_list\n' +
+      '        for classroom in classroom_list\n' +
+      '          div.checkbox-container\n' +
+      `            input.classroom.form-check-input( checked= !centreToEdit ? : "" : centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\n` +
+      "            label.form-check-label(for='classroom') #{classroom.name}\n" +
+      `      button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\n` +
+      '  br\n' +
+      '  br  \n' +
+      '  if centre\n' +
+      '    hr\n' +
+      '    p "#{centre.name}" added.\n' +
+      '  if valErr\n' +
+      '    div\n' +
+      '      br\n' +
+      '      hr\n' +
+      '      p.valErr #{valErr}\n' +
+      '  if deletedCentre\n' +
+      '    hr\n' +
+      '    p "#{deletedCentre}" is deleted.\n' +
+      '  table.table.table-foods\n' +
+      '    tr\n' +
+      '      th Centre\n' +
+      '    for centre in centres\n' +
+      '      tr\n' +
+      '        td #{centre.name}\n' +
+      '        td\n' +
+      "          a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )\n" +
+      "            svg.bi.bi-pencil(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\n" +
+      "              path(d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z')  \n" +
+      "          a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )\n" +
+      "            svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\n" +
+      "              path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')\n" +
+      "              path(fill-rule='evenodd' d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z')      \n" +
+      "  #ModalCenter.modal.fade.bd-modal-sm(tabindex='-1' role='dialog' aria-labelledby='ModalCenterTitle' aria-hidden='true')\n" +
+      "    .modal-dialog.modal-dialog-centered.modal-sm(role='document')\n" +
+      '      .modal-content\n' +
+      '        .modal-header\n' +
+      "          button.close(type='button' data-dismiss='modal' aria-label='Close')\n" +
+      "            span(aria-hidden='true') &times;\n" +
+      '        .modal-body#modal-message\n' +
+      '        .modal-footer\n' +
+      "          button.btn.btn-secondary(type='button' data-dismiss='modal') Cancel\n" +
+      "          a.btn.btn-danger#confirm-delete-btn(target='_self') Delete  \n" +
+      '  if errors \n' +
+      '   ul\n' +
+      '    for error in errors\n' +
+      '     li!= error.msg',
+    toJSON: [Function]
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T12:48:23.174Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:14:72\n' +
+    '    12|         for classroom in classroom_list\n' +
+    '    13|           div.checkbox-container\n' +
+    `  > 14|             input.classroom.form-check-input( checked= !centreToEdit ? : "" : centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\n` +
+    '-------------------------------------------------------------------------------^\n' +
+    "    15|             label.form-check-label(for='classroom') #{classroom.name}\n" +
+    `    16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\n` +
+    '    17|   br\n' +
+    '\n' +
+    'Syntax Error: Unexpected token',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:14:72
+      12|         for classroom in classroom_list
+      13|           div.checkbox-container
+    > 14|             input.classroom.form-check-input( checked= !centreToEdit ? : "" : centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )
+  -------------------------------------------------------------------------------^
+      15|             label.form-check-label(for='classroom') #{classroom.name}
+      16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre
+      17|   br
+  
+  Syntax Error: Unexpected token
+      at makeError (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-error\index.js:34:13)
+      at Lexer.error (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:62:15)
+      at Lexer.assertExpression (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:96:12)
+      at Lexer.attributeValue (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1423:10)
+      at Lexer.attribute (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1270:30)
+      at Lexer.attrs (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1449:20)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.advance (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1681:12)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.getTokens (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1701:12)
+      at lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:12:42)
+      at Object.lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:104:9)
+      at Function.loadString [as string] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-load\index.js:53:24)
+      at compileBody (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:82:18)
+      at Object.exports.compile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:267:16)
+      at handleTemplateCache (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:240:25) {
+    code: 'PUG:SYNTAX_ERROR',
+    msg: 'Syntax Error: Unexpected token',
+    line: 14,
+    column: 72,
+    filename: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug',
+    src: 'extends layout\n' +
+      '\n' +
+      'block content\n' +
+      '  h1 #{title}\n' +
+      '  hr\n' +
+      "  form.form(method='POST' action='')\n" +
+      '    div.form-group.form\n' +
+      "      label(for='name') Centre name:\n" +
+      "        input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required)\n" +
+      '      br  \n' +
+      '      if classroom_list\n' +
+      '        for classroom in classroom_list\n' +
+      '          div.checkbox-container\n' +
+      `            input.classroom.form-check-input( checked= !centreToEdit ? : "" : centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\n` +
+      "            label.form-check-label(for='classroom') #{classroom.name}\n" +
+      `      button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\n` +
+      '  br\n' +
+      '  br  \n' +
+      '  if centre\n' +
+      '    hr\n' +
+      '    p "#{centre.name}" added.\n' +
+      '  if valErr\n' +
+      '    div\n' +
+      '      br\n' +
+      '      hr\n' +
+      '      p.valErr #{valErr}\n' +
+      '  if deletedCentre\n' +
+      '    hr\n' +
+      '    p "#{deletedCentre}" is deleted.\n' +
+      '  table.table.table-foods\n' +
+      '    tr\n' +
+      '      th Centre\n' +
+      '    for centre in centres\n' +
+      '      tr\n' +
+      '        td #{centre.name}\n' +
+      '        td\n' +
+      "          a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )\n" +
+      "            svg.bi.bi-pencil(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\n" +
+      "              path(d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z')  \n" +
+      "          a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )\n" +
+      "            svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\n" +
+      "              path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')\n" +
+      "              path(fill-rule='evenodd' d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z')      \n" +
+      "  #ModalCenter.modal.fade.bd-modal-sm(tabindex='-1' role='dialog' aria-labelledby='ModalCenterTitle' aria-hidden='true')\n" +
+      "    .modal-dialog.modal-dialog-centered.modal-sm(role='document')\n" +
+      '      .modal-content\n' +
+      '        .modal-header\n' +
+      "          button.close(type='button' data-dismiss='modal' aria-label='Close')\n" +
+      "            span(aria-hidden='true') &times;\n" +
+      '        .modal-body#modal-message\n' +
+      '        .modal-footer\n' +
+      "          button.btn.btn-secondary(type='button' data-dismiss='modal') Cancel\n" +
+      "          a.btn.btn-danger#confirm-delete-btn(target='_self') Delete  \n" +
+      '  if errors \n' +
+      '   ul\n' +
+      '    for error in errors\n' +
+      '     li!= error.msg',
+    toJSON: [Function]
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T12:48:24.652Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:14:134\n' +
+    '    12|         for classroom in classroom_list\n' +
+    '    13|           div.checkbox-container\n' +
+    "  > 14|             input.classroom.form-check-input( checked= centreToEdit ? centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\n" +
+    '---------------------------------------------------------------------------------------------------------------------------------------------^\n' +
+    "    15|             label.form-check-label(for='classroom') #{classroom.name}\n" +
+    `    16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\n` +
+    '    17|   br\n' +
+    '\n' +
+    'Syntax Error: Unexpected token',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:14:134
+      12|         for classroom in classroom_list
+      13|           div.checkbox-container
+    > 14|             input.classroom.form-check-input( checked= centreToEdit ? centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )
+  ---------------------------------------------------------------------------------------------------------------------------------------------^
+      15|             label.form-check-label(for='classroom') #{classroom.name}
+      16|       button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre
+      17|   br
+  
+  Syntax Error: Unexpected token
+      at makeError (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-error\index.js:34:13)
+      at Lexer.error (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:62:15)
+      at Lexer.assertExpression (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:96:12)
+      at Lexer.attributeValue (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1423:10)
+      at Lexer.attribute (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1270:30)
+      at Lexer.attrs (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1449:20)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.advance (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1681:12)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.getTokens (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1701:12)
+      at lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:12:42)
+      at Object.lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:104:9)
+      at Function.loadString [as string] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-load\index.js:53:24)
+      at compileBody (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:82:18)
+      at Object.exports.compile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:267:16)
+      at handleTemplateCache (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:240:25) {
+    code: 'PUG:SYNTAX_ERROR',
+    msg: 'Syntax Error: Unexpected token',
+    line: 14,
+    column: 134,
+    filename: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug',
+    src: 'extends layout\n' +
+      '\n' +
+      'block content\n' +
+      '  h1 #{title}\n' +
+      '  hr\n' +
+      "  form.form(method='POST' action='')\n" +
+      '    div.form-group.form\n' +
+      "      label(for='name') Centre name:\n" +
+      "        input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required)\n" +
+      '      br  \n' +
+      '      if classroom_list\n' +
+      '        for classroom in classroom_list\n' +
+      '          div.checkbox-container\n' +
+      "            input.classroom.form-check-input( checked= centreToEdit ? centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\n" +
+      "            label.form-check-label(for='classroom') #{classroom.name}\n" +
+      `      button.btn.btn-primary(type='submit' onclick='location.href="/api/centres"' ) Save Centre\n` +
+      '  br\n' +
+      '  br  \n' +
+      '  if centre\n' +
+      '    hr\n' +
+      '    p "#{centre.name}" added.\n' +
+      '  if valErr\n' +
+      '    div\n' +
+      '      br\n' +
+      '      hr\n' +
+      '      p.valErr #{valErr}\n' +
+      '  if deletedCentre\n' +
+      '    hr\n' +
+      '    p "#{deletedCentre}" is deleted.\n' +
+      '  table.table.table-foods\n' +
+      '    tr\n' +
+      '      th Centre\n' +
+      '    for centre in centres\n' +
+      '      tr\n' +
+      '        td #{centre.name}\n' +
+      '        td\n' +
+      "          a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )\n" +
+      "            svg.bi.bi-pencil(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\n" +
+      "              path(d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z')  \n" +
+      "          a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )\n" +
+      "            svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\n" +
+      "              path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')\n" +
+      "              path(fill-rule='evenodd' d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z')      \n" +
+      "  #ModalCenter.modal.fade.bd-modal-sm(tabindex='-1' role='dialog' aria-labelledby='ModalCenterTitle' aria-hidden='true')\n" +
+      "    .modal-dialog.modal-dialog-centered.modal-sm(role='document')\n" +
+      '      .modal-content\n' +
+      '        .modal-header\n' +
+      "          button.close(type='button' data-dismiss='modal' aria-label='Close')\n" +
+      "            span(aria-hidden='true') &times;\n" +
+      '        .modal-body#modal-message\n' +
+      '        .modal-footer\n' +
+      "          button.btn.btn-secondary(type='button' data-dismiss='modal') Cancel\n" +
+      "          a.btn.btn-danger#confirm-delete-btn(target='_self') Delete  \n" +
+      '  if errors \n' +
+      '   ul\n' +
+      '    for error in errors\n' +
+      '     li!= error.msg',
+    toJSON: [Function]
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T12:49:15.385Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:10:11\n' +
+    '\n' +
+    'input is a self closing element: <input/> but contains nested content.',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:10:11
+  
+  input is a self closing element: <input/> but contains nested content.
+      at makeError (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-error\index.js:34:13)
+      at Compiler.error (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:90:15)
+      at Compiler.visitTag (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:648:14)
+      at Compiler.visitNode (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:359:37)
+      at Compiler.visit (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:348:10)
+      at Compiler.visitBlock (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:441:12)
+      at Compiler.visitNode (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:359:37)
+      at Compiler.visit (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:348:10)
+      at Compiler.visitTag (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:667:12)
+      at Compiler.visitNode (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:359:37)
+      at Compiler.visit (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:348:10)
+      at Compiler.visitBlock (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:441:12)
+      at Compiler.visitNode (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:359:37)
+      at Compiler.visit (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:348:10)
+      at Compiler.visitConditional (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:794:10)
+      at Compiler.visitNode (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:359:37) {
+    code: 'PUG:SELF_CLOSING_CONTENT',
+    msg: 'input is a self closing element: <input/> but contains nested content.',
+    line: 10,
+    column: 11,
+    filename: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug',
+    src: undefined,
+    toJSON: [Function]
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T13:03:05.171Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:10:11\n' +
+    '\n' +
+    'input is a self closing element: <input/> but contains nested content.',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:10:11
+  
+  input is a self closing element: <input/> but contains nested content.
+      at makeError (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-error\index.js:34:13)
+      at Compiler.error (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:90:15)
+      at Compiler.visitTag (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:648:14)
+      at Compiler.visitNode (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:359:37)
+      at Compiler.visit (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:348:10)
+      at Compiler.visitBlock (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:441:12)
+      at Compiler.visitNode (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:359:37)
+      at Compiler.visit (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:348:10)
+      at Compiler.visitTag (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:667:12)
+      at Compiler.visitNode (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:359:37)
+      at Compiler.visit (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:348:10)
+      at Compiler.visitBlock (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:441:12)
+      at Compiler.visitNode (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:359:37)
+      at Compiler.visit (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:348:10)
+      at Compiler.visitConditional (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:794:10)
+      at Compiler.visitNode (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:359:37) {
+    code: 'PUG:SELF_CLOSING_CONTENT',
+    msg: 'input is a self closing element: <input/> but contains nested content.',
+    line: 10,
+    column: 11,
+    filename: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug',
+    src: undefined,
+    toJSON: [Function]
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T13:03:06.354Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:10:11\n' +
+    '\n' +
+    'input is a self closing element: <input/> but contains nested content.',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:10:11
+  
+  input is a self closing element: <input/> but contains nested content.
+      at makeError (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-error\index.js:34:13)
+      at Compiler.error (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:90:15)
+      at Compiler.visitTag (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:648:14)
+      at Compiler.visitNode (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:359:37)
+      at Compiler.visit (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:348:10)
+      at Compiler.visitBlock (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:441:12)
+      at Compiler.visitNode (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:359:37)
+      at Compiler.visit (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:348:10)
+      at Compiler.visitTag (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:667:12)
+      at Compiler.visitNode (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:359:37)
+      at Compiler.visit (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:348:10)
+      at Compiler.visitBlock (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:441:12)
+      at Compiler.visitNode (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:359:37)
+      at Compiler.visit (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:348:10)
+      at Compiler.visitConditional (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:794:10)
+      at Compiler.visitNode (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-code-gen\index.js:359:37) {
+    code: 'PUG:SELF_CLOSING_CONTENT',
+    msg: 'input is a self closing element: <input/> but contains nested content.',
+    line: 10,
+    column: 11,
+    filename: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug',
+    src: undefined,
+    toJSON: [Function]
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T13:05:07.444Z'
+}
+{
+  message: 'centre is not defined',
+  level: '\u001b[31merror\u001b[39m',
+  meta: ReferenceError: centre is not defined
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:54:27
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:19
+      at newFn (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express-async-errors\index.js:16:20)
+      at Layer.handle [as handle_request] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\route.js:137:13)
+      at module.exports (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\validateObjectId.js:7:3)
+      at newFn (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express-async-errors\index.js:16:20)
+      at Layer.handle [as handle_request] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\route.js:137:13)
+      at module.exports (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\admin.js:7:5)
+      at newFn (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express-async-errors\index.js:16:20)
+      at Layer.handle [as handle_request] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\route.js:137:13)
+      at module.exports (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\auth.js:10:59)
+      at newFn (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express-async-errors\index.js:16:20)
+      at Layer.handle [as handle_request] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\layer.js:95:5),
+  service: 'user-service',
+  timestamp: '2021-07-10T13:30:04.547Z'
+}
+{
+  message: 'centres is not defined',
+  level: '\u001b[31merror\u001b[39m',
+  meta: ReferenceError: centres is not defined
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:60:88
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13,
+  service: 'user-service',
+  timestamp: '2021-07-10T13:31:52.361Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:15\n' +
+    "    13|           input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required)\r\n" +
+    '    14|       br  \r\n' +
+    '  > 15|       for classroom in classroom_list\r\n' +
+    '    16|         div.checkbox-container\r\n' +
+    '    17|           if centreToEdit\r\n' +
+    "    18|             input.classroom.form-check-input( checked=  centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\r\n" +
+    '\n' +
+    "Cannot read property 'length' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:15
+      13|           input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required)
+      14|       br  
+    > 15|       for classroom in classroom_list
+      16|         div.checkbox-container
+      17|           if centreToEdit
+      18|             input.classroom.form-check-input( checked=  centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )
+  
+  Cannot read property 'length' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:146:32)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:187:4)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:377:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:61:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T13:32:46.676Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:15\n' +
+    "    13|           input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required)\r\n" +
+    '    14|       br  \r\n' +
+    '  > 15|       for classroom in classroom_list\r\n' +
+    '    16|         div.checkbox-container\r\n' +
+    '    17|           if centreToEdit\r\n' +
+    "    18|             input.classroom.form-check-input( checked=  centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\r\n" +
+    '\n' +
+    "Cannot read property 'length' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:15
+      13|           input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required)
+      14|       br  
+    > 15|       for classroom in classroom_list
+      16|         div.checkbox-container
+      17|           if centreToEdit
+      18|             input.classroom.form-check-input( checked=  centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )
+  
+  Cannot read property 'length' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:146:32)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:187:4)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:377:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:61:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-10T13:33:42.055Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\classroom_form.pug:27\n' +
+    '    25|     tr\r\n' +
+    '    26|       th Classroom\r\n' +
+    '  > 27|     for classroom in classrooms\r\n' +
+    '    28|       tr\r\n' +
+    '    29|         td #{classroom.name}\r\n' +
+    '    30|         td\r\n' +
+    '\n' +
+    "Cannot read property 'length' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\classroom_form.pug:27
+      25|     tr
+      26|       th Classroom
+    > 27|     for classroom in classrooms
+      28|       tr
+      29|         td #{classroom.name}
+      30|         td
+  
+  Cannot read property 'length' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:188:32)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:251:4)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:312:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\classrooms.js:27:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\classroom_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-13T12:08:07.715Z'
+}
