@@ -4,7 +4,6 @@ const Joi = require('joi');
 var ClassroomSchema = new mongoose.Schema(
   {
     name: {type: String, required: true, maxlength: 100},
-    //ADD VALIDATOR TO DAYS AND MEAL
   },{ timestamps: true }
 );
 

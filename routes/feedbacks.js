@@ -27,7 +27,7 @@ router.post('/', [auth,educator], asyncMiddleware(async function(req, res, next)
   const { error } = joiSchema.validate(req.body); 
    
   if (error) return res.render('feedback_form',{
-    user: req.session.user.name, 
+    
     food_list: foods, 
     classroom_list: classrooms, 
     centre_list: centres, 
@@ -41,7 +41,7 @@ router.post('/', [auth,educator], asyncMiddleware(async function(req, res, next)
   });
 
   if (duplicateFeedback) return res.render('feedback_form',{
-    user: req.session.user.name, 
+    
     food_list: foods, 
     classroom_list: classrooms, 
     centre_list: centres, 
@@ -64,7 +64,7 @@ router.post('/', [auth,educator], asyncMiddleware(async function(req, res, next)
   feedback = await feedback.save();
 
   res.render('feedback_form',{
-    user: req.session.user.name, 
+    
     food_list: foods, 
     classroom_list: classrooms, 
     centre_list: centres,

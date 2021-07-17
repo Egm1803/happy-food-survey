@@ -9,7 +9,7 @@ const admin = require('../middleware/admin');
 router.get('/', [auth,admin], asyncMiddleware(async function(req, res, next) {
 
     let classrooms = await Classroom.find({});
-    res.render('classroom_form',{classrooms, user: req.session.user.name});
+    res.render( 'classroom_form',{title: 'Add new classroom', classrooms, user: req.session.user.name});
     
 }));
 
@@ -17,7 +17,7 @@ router.post('/', [auth,admin], asyncMiddleware(async function(req, res, next) {
 
     const { error } = joiSchema.validate(req.body); 
 
-    if (error) return res.render('classroom_form',{ valErr: error.details[0].message});
+    if (error) return res.render('classroom_form',{title: 'Add new classroom',  valErr: error.details[0].message});
 
     let classroom = new Classroom({ 
         name: req.body.name
@@ -26,7 +26,7 @@ router.post('/', [auth,admin], asyncMiddleware(async function(req, res, next) {
     
     let classrooms = await Classroom.find({});
 
-    res.render('classroom_form',{ classroom: classroom.name,classrooms, user: req.session.user.name});
+    res.render('classroom_form',{title: 'Add new classroom', classroom: classroom.name,classrooms, user: req.session.user.name});
 }));
 
 //Get edit classroom screen
@@ -37,22 +37,22 @@ router.get('/:_id', [auth,admin,validateObjectId], asyncMiddleware(async functio
     let classroomToEdit = await Classroom.findOne({_id: req.params._id});
     if (!classroomToEdit) return res.render('classroom_form',{ classroomToEdit });
     let classrooms = await Classroom.find({});
-    res.render('classroom_form',{ classrooms, classroomToEdit, user: req.session.user.name});
+    res.render('classroom_form',{title: 'Edit classroom', classrooms, classroomToEdit, user: req.session.user.name});
     
 }));
 
 router.post('/:_id', [auth,admin,validateObjectId], asyncMiddleware(async function(req, res, next) {
 
     const { error } = joiSchema.validate(req.body); 
-    if (error) return res.render('classroom_form',{ user: req.session.user.name, valErr: error.details[0].message});
+    if (error) return res.render('classroom_form',{ title: 'Add new classroom', valErr: error.details[0].message});
 
     const updatedClassroom = await Classroom.findOneAndUpdate({_id:req.params._id}, req.body, {new: true, useFindAndModify: true}).exec();
     
-    if (!updatedClassroom) return res.render('classroom_form',{user: req.session.user.name, classrooms, valErr: "Can't find the classroom you are looking for." });
+    if (!updatedClassroom) return res.render('classroom_form',{title: 'Add new classroom', classrooms, valErr: "Can't find the classroom you are looking for." });
     
     let classrooms = await Classroom.find({});
 
-    res.render('classroom_form',{ user: req.session.user.name, classroom: updatedClassroom, classrooms });
+    res.render('classroom_form',{ title: 'Add new classroom', classroom: updatedClassroom, classrooms });
 
 }));
 
@@ -61,7 +61,7 @@ router.get('/:_id/delete', [auth,admin,validateObjectId], asyncMiddleware(async 
 
     await Classroom.deleteOne({_id: req.params._id});
     let classrooms = await Classroom.find({});
-    res.render('classroom_form',{ classrooms , user: req.session.user.name,});
+    res.render('classroom_form',{title: 'Add new classroom',  classrooms , user: req.session.user.name,});
     
 }));
 

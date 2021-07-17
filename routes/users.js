@@ -10,13 +10,13 @@ const admin = require('../middleware/admin');
 router.get('/', [auth,admin], asyncMiddleware( async function(req, res, next) {
     let userList = await User.find().select('name');
 
-    res.render('users',{user: req.session.user.name, userList });
+    res.render('users',{userList });
     
 }));
 // Get user edit screen
 router.get('/:user', [auth,admin], asyncMiddleware( async function(req, res, next) {
     let userList = await User.find().select('name');
-    res.render('users',{userList ,user: req.session.user.name, roleToEdit: req.params.user });
+    res.render('users',{userList ,roleToEdit: req.params.user });
     
 }));
 

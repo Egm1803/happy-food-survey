@@ -9315,3 +9315,1029 @@
   service: 'user-service',
   timestamp: '2021-07-13T12:08:07.715Z'
 }
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\layout.pug:4:18\n' +
+    "    2| html(lang='en')\n" +
+    '    3|   head\n' +
+    '  > 4|     title= Happy Food Survey\n' +
+    '------------------------^\n' +
+    "    5|     meta(charset='utf-8')\n" +
+    "    6|     meta(name='viewport', content='width=device-width, initial-scale=1')\n" +
+    "    7|     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')\n" +
+    '\n' +
+    'Syntax Error: Unexpected token',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\layout.pug:4:18
+      2| html(lang='en')
+      3|   head
+    > 4|     title= Happy Food Survey
+  ------------------------^
+      5|     meta(charset='utf-8')
+      6|     meta(name='viewport', content='width=device-width, initial-scale=1')
+      7|     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  
+  Syntax Error: Unexpected token
+      at makeError (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-error\index.js:34:13)
+      at Lexer.error (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:62:15)
+      at Lexer.assertExpression (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:96:12)
+      at Lexer.code (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1175:28)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.advance (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1677:12)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.getTokens (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1701:12)
+      at lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:12:42)
+      at Object.lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:104:9)
+      at Function.loadString [as string] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-load\index.js:53:24)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-load\index.js:37:27
+      at walkAST (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-walk\index.js:26:18)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-walk\index.js:112:20
+      at Array.reduce (<anonymous>)
+      at walkAndMergeNodes (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-walk\index.js:111:18) {
+    code: 'PUG:SYNTAX_ERROR',
+    msg: 'Syntax Error: Unexpected token',
+    line: 4,
+    column: 18,
+    filename: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\layout.pug',
+    src: 'doctype html\n' +
+      "html(lang='en')\n" +
+      '  head\n' +
+      '    title= Happy Food Survey\n' +
+      "    meta(charset='utf-8')\n" +
+      "    meta(name='viewport', content='width=device-width, initial-scale=1')\n" +
+      "    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')\n" +
+      "    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')\n" +
+      "    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')\n" +
+      '    script(src="/javascripts/scripts.js")\n' +
+      "    link(rel='stylesheet', href='/stylesheets/style.css')\n" +
+      '  body    \n' +
+      '    div.container-fluid\n' +
+      '      div.row\n' +
+      '        if (user)\n' +
+      '          div#sidebar-wrapper.col-sm-3\n' +
+      '            block sidebar\n' +
+      '              ul.sidebar-nav#sidebar-ul\n' +
+      '                li#user-info Logged in as "#{user}"\n' +
+      "                a.nav-button(href='/')\n" +
+      '                  li Change User\n' +
+      "                a(href='/' onclick='logoutConfirm(event,)')\n" +
+      '                  li Logout\n' +
+      "                a.nav-button(href='/api/feedbacks')\n" +
+      '                  li Fill Out The Form\n' +
+      "                if (user==='Manager' || user==='Admin')\n" +
+      "                  a.nav-button(href='/api/showResults') \n" +
+      '                    li Results\n' +
+      "                if (user==='Admin')                        \n" +
+      "                  a.nav-button(href='/api/users')\n" +
+      '                    li User Roles\n' +
+      "                  a.nav-button(href='/api/foods')\n" +
+      '                    li Edit Foods\n' +
+      "                  a.nav-button(href='/api/centres')\n" +
+      '                    li Edit Centres\n' +
+      "                  a.nav-button(href='/api/classrooms')\n" +
+      '                    li Edit Classrooms\n' +
+      "        div(class='col-sm-9')\n" +
+      '          block content',
+    toJSON: [Function]
+  },
+  service: 'user-service',
+  timestamp: '2021-07-17T08:01:18.199Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:40\n' +
+    '    38|     tr\r\n' +
+    '    39|       th Centre\r\n' +
+    '  > 40|     for centre in centres\r\n' +
+    '    41|       tr\r\n' +
+    '    42|         td #{centre.name}\r\n' +
+    '    43|         td\r\n' +
+    '\n' +
+    "Cannot read property 'length' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:40
+      38|     tr
+      39|       th Centre
+    > 40|     for centre in centres
+      41|       tr
+      42|         td #{centre.name}
+      43|         td
+  
+  Cannot read property 'length' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:253:32)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:316:4)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:377:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:24:27
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-17T08:18:56.930Z'
+}
+{
+  message: "Cannot read property 'my_session' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: Cannot read property 'my_session' of undefined
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\app.js:95:19
+      at newFn (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express-async-errors\index.js:16:20)
+      at Layer.handle [as handle_request] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\layer.js:95:5)
+      at trim_prefix (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:317:13)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:284:7
+      at Function.process_params (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:335:12)
+      at next (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:275:10)
+      at compression (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\compression\index.js:220:5)
+      at newFn (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express-async-errors\index.js:16:20)
+      at Layer.handle [as handle_request] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\layer.js:95:5)
+      at trim_prefix (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:317:13)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:284:7
+      at Function.process_params (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:335:12)
+      at next (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:275:10)
+      at internalNext (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\helmet\dist\index.js:79:17)
+      at xXssProtectionMiddleware (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\helmet\dist\middlewares\x-xss-protection\index.js:6:9),
+  service: 'user-service',
+  timestamp: '2021-07-17T11:43:51.473Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:6\n' +
+    '    4|   h1 #{title}\r\n' +
+    '    5|   hr\r\n' +
+    '  > 6|   != h.dump(res)\r\n' +
+    "    7|   form.form(method='POST' action='')\r\n" +
+    '    8|     div.form-group.form\r\n' +
+    '    9|       if centreToEdit\r\n' +
+    '\n' +
+    "Cannot read property 'dump' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:6
+      4|   h1 #{title}
+      5|   hr
+    > 6|   != h.dump(res)
+      7|   form.form(method='POST' action='')
+      8|     div.form-group.form
+      9|       if centreToEdit
+  
+  Cannot read property 'dump' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:120:48)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:365:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at runMicrotasks (<anonymous>)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-17T12:12:49.635Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:6\n' +
+    '    4|   h1 #{title}\r\n' +
+    '    5|   hr\r\n' +
+    '  > 6|   != h.dump(res)\r\n' +
+    "    7|   form.form(method='POST' action='')\r\n" +
+    '    8|     div.form-group.form\r\n' +
+    '    9|       if centreToEdit\r\n' +
+    '\n' +
+    "Cannot read property 'dump' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:6
+      4|   h1 #{title}
+      5|   hr
+    > 6|   != h.dump(res)
+      7|   form.form(method='POST' action='')
+      8|     div.form-group.form
+      9|       if centreToEdit
+  
+  Cannot read property 'dump' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:120:48)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:365:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-17T12:16:02.908Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:7:1\n' +
+    '    5|   hr\r\n' +
+    '    6| != h.dump(res)\r\n' +
+    "  > 7|   form.form(method='POST' action='')\r\n" +
+    '-------^\n' +
+    '    8|     div.form-group.form\r\n' +
+    '    9|       if centreToEdit\r\n' +
+    "    10|         label(for='name') Centre name:\r\n" +
+    '\n' +
+    'Buffered code cannot have a block attached to it',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:7:1
+      5|   hr
+      6| != h.dump(res)
+    > 7|   form.form(method='POST' action='')
+  -------^
+      8|     div.form-group.form
+      9|       if centreToEdit
+      10|         label(for='name') Centre name:
+  
+  Buffered code cannot have a block attached to it
+      at makeError (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-error\index.js:34:13)
+      at Parser.error (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-parser\index.js:56:15)
+      at Parser.parseCode (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-parser\index.js:547:14)
+      at Parser.parseExpr (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-parser\index.js:254:21)
+      at Parser.parse (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-parser\index.js:115:25)
+      at parse (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-parser\index.js:12:20)
+      at Object.parse (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:137:11)
+      at Function.loadString [as string] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-load\index.js:54:21)
+      at compileBody (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:82:18)
+      at Object.exports.compile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:267:16)
+      at handleTemplateCache (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:240:25)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:10)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10) {
+    code: 'PUG:BLOCK_IN_BUFFERED_CODE',
+    msg: 'Buffered code cannot have a block attached to it',
+    line: 7,
+    column: 1,
+    filename: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug',
+    src: 'extends layout\r\n' +
+      '\r\n' +
+      'block content\r\n' +
+      '  h1 #{title}\r\n' +
+      '  hr\r\n' +
+      '!= h.dump(res)\r\n' +
+      "  form.form(method='POST' action='')\r\n" +
+      '    div.form-group.form\r\n' +
+      '      if centreToEdit\r\n' +
+      "        label(for='name') Centre name:\r\n" +
+      "          input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required, value= centreToEdit .name)    \r\n" +
+      '      else \r\n' +
+      "        label(for='name') Centre name:\r\n" +
+      "          input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required)\r\n" +
+      '      br  \r\n' +
+      '      for classroom in classroom_list\r\n' +
+      '        div.checkbox-container\r\n' +
+      '          if centreToEdit\r\n' +
+      "            input.classroom.form-check-input( checked=  centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\r\n" +
+      '          else \r\n' +
+      "            input.classroom.form-check-input( type='checkbox', name='classroom' value= classroom.name  )\r\n" +
+      "          label.form-check-label(for='classroom') #{classroom.name}\r\n" +
+      '    button.btn.btn-primary(type=\'submit\' onclick="location.href=`/api/centres/${centreToEdit ? centreToEdit._id : \'\' }`" ) Save Centre\r\n' +
+      `    button.btn.btn-secondary(type='button' onclick='location.href="/api/centres"') Cancel\r\n` +
+      '  br\r\n' +
+      '  br  \r\n' +
+      '  if centre\r\n' +
+      '    p "#{centre.name}" added.\r\n' +
+      '  if valErr\r\n' +
+      '    div\r\n' +
+      '      br\r\n' +
+      '      hr\r\n' +
+      '      p.valErr #{valErr}\r\n' +
+      '  if deletedCentre\r\n' +
+      '    hr\r\n' +
+      '    p "#{deletedCentre}" is deleted.\r\n' +
+      '  table.table.table-foods\r\n' +
+      '    tr\r\n' +
+      '      th Centre\r\n' +
+      '    for centre in centres\r\n' +
+      '      tr\r\n' +
+      '        td #{centre.name}\r\n' +
+      '        td\r\n' +
+      "          a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )\r\n" +
+      '\r\n' +
+      "          a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )\r\n" +
+      "            svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\r\n" +
+      "              path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')\r\n" +
+      "              path(fill-rule='evenodd' d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z')      \r\n" +
+      "  #ModalCenter.modal.fade.bd-modal-sm(tabindex='-1' role='dialog' aria-labelledby='ModalCenterTitle' aria-hidden='true')\r\n" +
+      "    .modal-dialog.modal-dialog-centered.modal-sm(role='document')\r\n" +
+      '      .modal-content\r\n' +
+      '        .modal-header\r\n' +
+      "          button.close(type='button' data-dismiss='modal' aria-label='Close')\r\n" +
+      "            span(aria-hidden='true') &times;\r\n" +
+      '        .modal-body#modal-message\r\n' +
+      '        .modal-footer\r\n' +
+      "          button.btn.btn-secondary(type='button' data-dismiss='modal') Cancel\r\n" +
+      "          a.btn.btn-danger#confirm-delete-btn(target='_self') Delete  \r\n" +
+      '  if errors \r\n' +
+      '   ul\r\n' +
+      '    for error in errors\r\n' +
+      '     li!= error.msg',
+    toJSON: [Function]
+  },
+  service: 'user-service',
+  timestamp: '2021-07-17T12:16:43.777Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:2:1\n' +
+    '\n' +
+    'Only named blocks and mixins can appear at the top level of an extending template',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:2:1
+  
+  Only named blocks and mixins can appear at the top level of an extending template
+      at makeError (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-error\index.js:34:13)
+      at error (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-linker\index.js:7:30)
+      at addNode (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-linker\index.js:37:9)
+      at Array.forEach (<anonymous>)
+      at link (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-linker\index.js:29:15)
+      at compileBody (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:192:9)
+      at Object.exports.compile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:267:16)
+      at handleTemplateCache (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:240:25)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:10)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9 {
+    code: 'PUG:UNEXPECTED_NODES_IN_EXTENDING_ROOT',
+    msg: 'Only named blocks and mixins can appear at the top level of an extending template',
+    line: 2,
+    column: 1,
+    filename: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug',
+    src: undefined,
+    toJSON: [Function]
+  },
+  service: 'user-service',
+  timestamp: '2021-07-17T12:17:23.906Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:4\n' +
+    '    2| \r\n' +
+    '    3| block content\r\n' +
+    '  > 4|   != h.dump(res)\r\n' +
+    '    5|   h1 #{title}\r\n' +
+    '    6|   hr\r\n' +
+    "    7|   form.form(method='POST' action='')\r\n" +
+    '\n' +
+    "Cannot read property 'dump' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:4
+      2| 
+      3| block content
+    > 4|   != h.dump(res)
+      5|   h1 #{title}
+      6|   hr
+      7|   form.form(method='POST' action='')
+  
+  Cannot read property 'dump' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:114:48)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:365:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-17T12:18:35.434Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:4\n' +
+    '    2| \r\n' +
+    '    3| block content\r\n' +
+    '  > 4|   != h.dump(res)\r\n' +
+    '    5|   h1 #{title}\r\n' +
+    '    6|   hr\r\n' +
+    "    7|   form.form(method='POST' action='')\r\n" +
+    '\n' +
+    "Cannot read property 'dump' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:4
+      2| 
+      3| block content
+    > 4|   != h.dump(res)
+      5|   h1 #{title}
+      6|   hr
+      7|   form.form(method='POST' action='')
+  
+  Cannot read property 'dump' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:114:48)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:365:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-17T12:18:56.716Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:4\n' +
+    '    2| \r\n' +
+    '    3| block content\r\n' +
+    '  > 4|   != h.dump(res)\r\n' +
+    '    5|   h1 #{title}\r\n' +
+    '    6|   hr\r\n' +
+    "    7|   form.form(method='POST' action='')\r\n" +
+    '\n' +
+    "Cannot read property 'dump' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:4
+      2| 
+      3| block content
+    > 4|   != h.dump(res)
+      5|   h1 #{title}
+      6|   hr
+      7|   form.form(method='POST' action='')
+  
+  Cannot read property 'dump' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:114:48)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:365:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-17T12:20:57.564Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:4\n' +
+    '    2| \r\n' +
+    '    3| block content\r\n' +
+    '  > 4|   != h.dump(res)\r\n' +
+    '    5|   h1 #{title}\r\n' +
+    '    6|   hr\r\n' +
+    "    7|   form.form(method='POST' action='')\r\n" +
+    '\n' +
+    "Cannot read property 'dump' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:4
+      2| 
+      3| block content
+    > 4|   != h.dump(res)
+      5|   h1 #{title}
+      6|   hr
+      7|   form.form(method='POST' action='')
+  
+  Cannot read property 'dump' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:114:48)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:365:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-17T12:21:04.484Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:4\n' +
+    '    2| \r\n' +
+    '    3| block content\r\n' +
+    '  > 4|   != h.dump(res)\r\n' +
+    '    5|   h1 #{title}\r\n' +
+    '    6|   hr\r\n' +
+    "    7|   form.form(method='POST' action='')\r\n" +
+    '\n' +
+    "Cannot read property 'dump' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:4
+      2| 
+      3| block content
+    > 4|   != h.dump(res)
+      5|   h1 #{title}
+      6|   hr
+      7|   form.form(method='POST' action='')
+  
+  Cannot read property 'dump' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:114:48)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:365:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-17T12:23:05.159Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:4\n' +
+    '    2| \r\n' +
+    '    3| block content\r\n' +
+    '  > 4|   != h.dump(res)\r\n' +
+    '    5|   h1 #{title}\r\n' +
+    '    6|   hr\r\n' +
+    "    7|   form.form(method='POST' action='')\r\n" +
+    '\n' +
+    "Cannot read property 'dump' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:4
+      2| 
+      3| block content
+    > 4|   != h.dump(res)
+      5|   h1 #{title}
+      6|   hr
+      7|   form.form(method='POST' action='')
+  
+  Cannot read property 'dump' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:114:48)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:365:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-17T12:24:41.326Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:4\n' +
+    '    2| \r\n' +
+    '    3| block content\r\n' +
+    '  > 4|   != h.dump(res)\r\n' +
+    '    5|   h1 #{title}\r\n' +
+    '    6|   hr\r\n' +
+    "    7|   form.form(method='POST' action='')\r\n" +
+    '\n' +
+    "Cannot read property 'dump' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:4
+      2| 
+      3| block content
+    > 4|   != h.dump(res)
+      5|   h1 #{title}
+      6|   hr
+      7|   form.form(method='POST' action='')
+  
+  Cannot read property 'dump' of undefined
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:114:48)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:365:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-17T12:24:42.967Z'
+}
+{
+  message: "Cannot read property 'user' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: Cannot read property 'user' of undefined
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\app.js:20:33
+      at newFn (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express-async-errors\index.js:16:20)
+      at Layer.handle [as handle_request] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\layer.js:95:5)
+      at trim_prefix (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:317:13)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:284:7
+      at Function.process_params (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:335:12)
+      at next (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:275:10)
+      at expressInit (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\middleware\init.js:40:5)
+      at newFn (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express-async-errors\index.js:16:20)
+      at Layer.handle [as handle_request] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\layer.js:95:5)
+      at trim_prefix (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:317:13)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:284:7
+      at Function.process_params (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:335:12)
+      at next (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:275:10)
+      at query (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\middleware\query.js:45:5)
+      at newFn (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express-async-errors\index.js:16:20),
+  service: 'user-service',
+  timestamp: '2021-07-17T12:25:14.619Z'
+}
+{
+  message: "Cannot read property 'user' of undefined",
+  level: '\u001b[31merror\u001b[39m',
+  meta: TypeError: Cannot read property 'user' of undefined
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\app.js:20:33
+      at newFn (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express-async-errors\index.js:16:20)
+      at Layer.handle [as handle_request] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\layer.js:95:5)
+      at trim_prefix (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:317:13)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:284:7
+      at Function.process_params (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:335:12)
+      at next (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:275:10)
+      at expressInit (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\middleware\init.js:40:5)
+      at newFn (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express-async-errors\index.js:16:20)
+      at Layer.handle [as handle_request] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\layer.js:95:5)
+      at trim_prefix (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:317:13)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:284:7
+      at Function.process_params (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:335:12)
+      at next (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\router\index.js:275:10)
+      at query (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\middleware\query.js:45:5)
+      at newFn (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express-async-errors\index.js:16:20),
+  service: 'user-service',
+  timestamp: '2021-07-17T12:25:15.197Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:44:31\n' +
+    '    42|         td\n' +
+    "    43|           a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )\n" +
+    "  > 44|             = h.icon('pencil');\n" +
+    '--------------------------------------^\n' +
+    "    45|           a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )\n" +
+    "    46|             svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\n" +
+    "    47|               path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')\n" +
+    '\n' +
+    'Syntax Error: Unexpected token',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:44:31
+      42|         td
+      43|           a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )
+    > 44|             = h.icon('pencil');
+  --------------------------------------^
+      45|           a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )
+      46|             svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')
+      47|               path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')
+  
+  Syntax Error: Unexpected token
+      at makeError (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-error\index.js:34:13)
+      at Lexer.error (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:62:15)
+      at Lexer.assertExpression (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:96:12)
+      at Lexer.code (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1175:28)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.advance (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1677:12)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.getTokens (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1701:12)
+      at lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:12:42)
+      at Object.lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:104:9)
+      at Function.loadString [as string] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-load\index.js:53:24)
+      at compileBody (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:82:18)
+      at Object.exports.compile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:267:16)
+      at handleTemplateCache (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:240:25)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:10)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21) {
+    code: 'PUG:SYNTAX_ERROR',
+    msg: 'Syntax Error: Unexpected token',
+    line: 44,
+    column: 31,
+    filename: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug',
+    src: 'extends layout\n' +
+      '\n' +
+      'block content\n' +
+      '  h1 #{title}\n' +
+      '  hr\n' +
+      "  form.form(method='POST' action='')\n" +
+      '    div.form-group.form\n' +
+      '      if centreToEdit\n' +
+      "        label(for='name') Centre name:\n" +
+      "          input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required, value= centreToEdit .name)    \n" +
+      '      else \n' +
+      "        label(for='name') Centre name:\n" +
+      "          input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required)\n" +
+      '      br  \n' +
+      '      for classroom in classroom_list\n' +
+      '        div.checkbox-container\n' +
+      '          if centreToEdit\n' +
+      "            input.classroom.form-check-input( checked=  centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\n" +
+      '          else \n' +
+      "            input.classroom.form-check-input( type='checkbox', name='classroom' value= classroom.name  )\n" +
+      "          label.form-check-label(for='classroom') #{classroom.name}\n" +
+      '    button.btn.btn-primary(type=\'submit\' onclick="location.href=`/api/centres/${centreToEdit ? centreToEdit._id : \'\' }`" ) Save Centre\n' +
+      `    button.btn.btn-secondary(type='button' onclick='location.href="/api/centres"') Cancel\n` +
+      '  br\n' +
+      '  br  \n' +
+      '  if centre\n' +
+      '    p "#{centre.name}" added.\n' +
+      '  if valErr\n' +
+      '    div\n' +
+      '      br\n' +
+      '      hr\n' +
+      '      p.valErr #{valErr}\n' +
+      '  if deletedCentre\n' +
+      '    hr\n' +
+      '    p "#{deletedCentre}" is deleted.\n' +
+      '  table.table.table-foods\n' +
+      '    tr\n' +
+      '      th Centre\n' +
+      '    for centre in centres\n' +
+      '      tr\n' +
+      '        td #{centre.name}\n' +
+      '        td\n' +
+      "          a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )\n" +
+      "            = h.icon('pencil');\n" +
+      "          a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )\n" +
+      "            svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\n" +
+      "              path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')\n" +
+      "              path(fill-rule='evenodd' d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z')      \n" +
+      "  #ModalCenter.modal.fade.bd-modal-sm(tabindex='-1' role='dialog' aria-labelledby='ModalCenterTitle' aria-hidden='true')\n" +
+      "    .modal-dialog.modal-dialog-centered.modal-sm(role='document')\n" +
+      '      .modal-content\n' +
+      '        .modal-header\n' +
+      "          button.close(type='button' data-dismiss='modal' aria-label='Close')\n" +
+      "            span(aria-hidden='true') &times;\n" +
+      '        .modal-body#modal-message\n' +
+      '        .modal-footer\n' +
+      "          button.btn.btn-secondary(type='button' data-dismiss='modal') Cancel\n" +
+      "          a.btn.btn-danger#confirm-delete-btn(target='_self') Delete  \n" +
+      '  if errors \n' +
+      '   ul\n' +
+      '    for error in errors\n' +
+      '     li!= error.msg',
+    toJSON: [Function]
+  },
+  service: 'user-service',
+  timestamp: '2021-07-17T12:32:45.277Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:44:32\n' +
+    '    42|         td\n' +
+    "    43|           a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )\n" +
+    "  > 44|             != h.icon('pencil');\n" +
+    '---------------------------------------^\n' +
+    "    45|           a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )\n" +
+    "    46|             svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\n" +
+    "    47|               path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')\n" +
+    '\n' +
+    'Syntax Error: Unexpected token',
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:44:32
+      42|         td
+      43|           a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )
+    > 44|             != h.icon('pencil');
+  ---------------------------------------^
+      45|           a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )
+      46|             svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')
+      47|               path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')
+  
+  Syntax Error: Unexpected token
+      at makeError (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-error\index.js:34:13)
+      at Lexer.error (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:62:15)
+      at Lexer.assertExpression (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:96:12)
+      at Lexer.code (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1175:28)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.advance (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1677:12)
+      at Lexer.callLexerFunction (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1642:23)
+      at Lexer.getTokens (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:1701:12)
+      at lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-lexer\index.js:12:42)
+      at Object.lex (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:104:9)
+      at Function.loadString [as string] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-load\index.js:53:24)
+      at compileBody (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:82:18)
+      at Object.exports.compile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:267:16)
+      at handleTemplateCache (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:240:25)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:10)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21) {
+    code: 'PUG:SYNTAX_ERROR',
+    msg: 'Syntax Error: Unexpected token',
+    line: 44,
+    column: 32,
+    filename: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug',
+    src: 'extends layout\n' +
+      '\n' +
+      'block content\n' +
+      '  h1 #{title}\n' +
+      '  hr\n' +
+      "  form.form(method='POST' action='')\n" +
+      '    div.form-group.form\n' +
+      '      if centreToEdit\n' +
+      "        label(for='name') Centre name:\n" +
+      "          input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required, value= centreToEdit .name)    \n" +
+      '      else \n' +
+      "        label(for='name') Centre name:\n" +
+      "          input#name.form-control(type='text', placeholder='i.e Surrey Hills', name='name', required)\n" +
+      '      br  \n' +
+      '      for classroom in classroom_list\n' +
+      '        div.checkbox-container\n' +
+      '          if centreToEdit\n' +
+      "            input.classroom.form-check-input( checked=  centreToEdit.classroom.includes(classroom.name) ? true : false type='checkbox', name='classroom' value= classroom.name  )\n" +
+      '          else \n' +
+      "            input.classroom.form-check-input( type='checkbox', name='classroom' value= classroom.name  )\n" +
+      "          label.form-check-label(for='classroom') #{classroom.name}\n" +
+      '    button.btn.btn-primary(type=\'submit\' onclick="location.href=`/api/centres/${centreToEdit ? centreToEdit._id : \'\' }`" ) Save Centre\n' +
+      `    button.btn.btn-secondary(type='button' onclick='location.href="/api/centres"') Cancel\n` +
+      '  br\n' +
+      '  br  \n' +
+      '  if centre\n' +
+      '    p "#{centre.name}" added.\n' +
+      '  if valErr\n' +
+      '    div\n' +
+      '      br\n' +
+      '      hr\n' +
+      '      p.valErr #{valErr}\n' +
+      '  if deletedCentre\n' +
+      '    hr\n' +
+      '    p "#{deletedCentre}" is deleted.\n' +
+      '  table.table.table-foods\n' +
+      '    tr\n' +
+      '      th Centre\n' +
+      '    for centre in centres\n' +
+      '      tr\n' +
+      '        td #{centre.name}\n' +
+      '        td\n' +
+      "          a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )\n" +
+      "            != h.icon('pencil');\n" +
+      "          a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )\n" +
+      "            svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\n" +
+      "              path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')\n" +
+      "              path(fill-rule='evenodd' d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z')      \n" +
+      "  #ModalCenter.modal.fade.bd-modal-sm(tabindex='-1' role='dialog' aria-labelledby='ModalCenterTitle' aria-hidden='true')\n" +
+      "    .modal-dialog.modal-dialog-centered.modal-sm(role='document')\n" +
+      '      .modal-content\n' +
+      '        .modal-header\n' +
+      "          button.close(type='button' data-dismiss='modal' aria-label='Close')\n" +
+      "            span(aria-hidden='true') &times;\n" +
+      '        .modal-body#modal-message\n' +
+      '        .modal-footer\n' +
+      "          button.btn.btn-secondary(type='button' data-dismiss='modal') Cancel\n" +
+      "          a.btn.btn-danger#confirm-delete-btn(target='_self') Delete  \n" +
+      '  if errors \n' +
+      '   ul\n' +
+      '    for error in errors\n' +
+      '     li!= error.msg',
+    toJSON: [Function]
+  },
+  service: 'user-service',
+  timestamp: '2021-07-17T12:33:33.356Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:44\n' +
+    '    42|         td\r\n' +
+    "    43|           a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )\r\n" +
+    "  > 44|             != h.icon('pencil')\r\n" +
+    "    45|           a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )\r\n" +
+    "    46|             svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\r\n" +
+    "    47|               path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')\r\n" +
+    '\n' +
+    "ENOENT: no such file or directory, open './public/images/icons/pencil.svg'",
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:44
+      42|         td
+      43|           a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )
+    > 44|             != h.icon('pencil')
+      45|           a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )
+      46|             svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')
+      47|               path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')
+  
+  ENOENT: no such file or directory, open './public/images/icons/pencil.svg'
+      at Object.openSync (fs.js:462:3)
+      at Object.readFileSync (fs.js:364:35)
+      at Object.exports.icon (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\helpers.js:14:29)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:265:48)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:306:4)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:367:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    errno: -4058,
+    syscall: 'open',
+    code: 'ENOENT',
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-17T12:33:56.518Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:44\n' +
+    '    42|         td\r\n' +
+    "    43|           a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )\r\n" +
+    "  > 44|             != h.icon('pencil')\r\n" +
+    "    45|           a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )\r\n" +
+    "    46|             svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\r\n" +
+    "    47|               path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')\r\n" +
+    '\n' +
+    "ENOENT: no such file or directory, open './public/images/icons/pencil.svg'",
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:44
+      42|         td
+      43|           a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )
+    > 44|             != h.icon('pencil')
+      45|           a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )
+      46|             svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')
+      47|               path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')
+  
+  ENOENT: no such file or directory, open './public/images/icons/pencil.svg'
+      at Object.openSync (fs.js:462:3)
+      at Object.readFileSync (fs.js:364:35)
+      at Object.exports.icon (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\helpers.js:14:29)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:265:48)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:306:4)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:367:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    errno: -4058,
+    syscall: 'open',
+    code: 'ENOENT',
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-17T12:33:58.680Z'
+}
+{
+  message: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug:44\n' +
+    '    42|         td\r\n' +
+    "    43|           a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )\r\n" +
+    "  > 44|             != h.icon('pencil')\r\n" +
+    "    45|           a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )\r\n" +
+    "    46|             svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')\r\n" +
+    "    47|               path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')\r\n" +
+    '\n' +
+    "ENOENT: no such file or directory, open './public/images/icons/pencil.svg'",
+  level: '\u001b[31merror\u001b[39m',
+  meta: Error: C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\views\centre_form.pug:44
+      42|         td
+      43|           a.btn.btn-primary(target='_self' href=`/api/centres/${centre._id}` )
+    > 44|             != h.icon('pencil')
+      45|           a.btn.btn-danger( data-centreId=centre._id data-centreName=centre.name onclick='deleteConfirmCentre(event,this)' target='_self' data-toggle='modal' data-target='#ModalCenter'  )
+      46|             svg.bi.bi-trash(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')
+      47|               path(d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z')
+  
+  ENOENT: no such file or directory, open './public/images/icons/pencil.svg'
+      at Object.openSync (fs.js:462:3)
+      at Object.readFileSync (fs.js:364:35)
+      at Object.exports.icon (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\helpers.js:14:29)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:265:48)
+      at eval (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:306:4)
+      at template (eval at wrap (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug-runtime\wrap.js:6:10), <anonymous>:367:7)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:452:38)
+      at Object.exports.renderFile (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:442:21)
+      at View.exports.__express [as engine] (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\pug\lib\index.js:491:11)
+      at View.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\view.js:135:8)
+      at tryRender (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:640:10)
+      at Function.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\application.js:592:3)
+      at ServerResponse.render (C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\node_modules\express\lib\response.js:1008:7)
+      at C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\routes\centres.js:14:9
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at async C:\Users\Mert\Documents\web_development\Projects\generated-feedback-app\middleware\asyncMiddleware.js:5:13 {
+    errno: -4058,
+    syscall: 'open',
+    code: 'ENOENT',
+    path: 'C:\\Users\\Mert\\Documents\\web_development\\Projects\\generated-feedback-app\\views\\centre_form.pug'
+  },
+  service: 'user-service',
+  timestamp: '2021-07-17T12:35:59.796Z'
+}

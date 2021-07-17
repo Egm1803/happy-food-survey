@@ -18,7 +18,7 @@ router.get('/', [auth,admin], asyncMiddleware(async function(req, res, next) {
         { $sort : {week : 1, dayValue : 1 } }
     ])
 
-    res.render('add_food_form',{title: 'Add Food', user: req.session.user.name, foods});
+    res.render('add_food_form',{title: 'Add Food', foods});
     
 }));
 
@@ -27,7 +27,7 @@ router.post('/', [auth,admin], asyncMiddleware(async function(req, res, next) {
 
     const { error } = joiSchema.validate(req.body); 
    
-    if (error) return res.render('add_food_form',{ user: req.session.user.name, valErr: error.details[0].message});
+    if (error) return res.render('add_food_form',{ valErr: error.details[0].message});
 
     let food = new Food({ 
         name: req.body.name,
@@ -43,7 +43,7 @@ router.post('/', [auth,admin], asyncMiddleware(async function(req, res, next) {
         { $sort : {week : 1, dayValue : 1 } }
     ])
 
-    res.render('add_food_form',{title: 'Add Food', user: req.session.user.name, food: food.name, foods});
+    res.render('add_food_form',{title: 'Add Food', food: food.name, foods});
 }));
 
 //Get edit food screen
@@ -55,12 +55,12 @@ router.get('/:_id', [auth,admin,validateObjectId], asyncMiddleware(async functio
         {$addFields:{ dayValue:{$indexOfArray:[["Monday", "Tuesday", "Wednesday","Thursday","Friday"], "$day"]}}},
         { $sort : {week : 1, dayValue : 1 } }
     ])
-    // if(!validId) return res.render('add_food_form',{user: req.session.user.name, foods, valErr: "Can't find the food you are looking for." });
+    // if(!validId) return res.render('add_food_form',{foods, valErr: "Can't find the food you are looking for." });
     
     let foodToEdit = await Food.findOne({_id: req.params._id});
-    if (!foodToEdit) return res.render('add_food_form',{user: req.session.user.name, foodToEdit, foods, valErr: "Can't find the food you are looking for." });
+    if (!foodToEdit) return res.render('add_food_form',{foodToEdit, foods, valErr: "Can't find the food you are looking for." });
     
-    res.render('add_food_form',{ user: req.session.user.name, foodToEdit, foods});
+    res.render('add_food_form',{ foodToEdit, foods});
     
 }));
 
@@ -68,7 +68,7 @@ router.get('/:_id', [auth,admin,validateObjectId], asyncMiddleware(async functio
 router.post('/:_id', [auth,admin,validateObjectId], asyncMiddleware(async function(req, res, next) {
 
     const { error } = joiSchema.validate(req.body); 
-    if (error) return res.render('add_food_form',{title: 'Add Food', user: req.session.user.name, valErr: error.details[0].message});
+    if (error) return res.render('add_food_form',{title: 'Add Food', valErr: error.details[0].message});
 
     const updatedFood = await Food.findOneAndUpdate({_id:req.params._id}, req.body, {new: true, useFindAndModify: true}).exec();
     
@@ -77,9 +77,9 @@ router.post('/:_id', [auth,admin,validateObjectId], asyncMiddleware(async functi
         { $sort : {week : 1, dayValue : 1 } }
     ])
     //Even if we cant find the food to be updated, we still need the foods to populate the foods table.
-    if (!updatedFood) return res.render('add_food_form',{user: req.session.user.name, foods, valErr: "Can't find the food you are looking for." });
+    if (!updatedFood) return res.render('add_food_form',{foods, valErr: "Can't find the food you are looking for." });
 
-    res.render('add_food_form',{ user: req.session.user.name, food: updatedFood.name,foods });
+    res.render('add_food_form',{ food: updatedFood.name,foods });
 }));
 
 
@@ -93,7 +93,7 @@ router.get('/:_id/delete', [auth,admin,validateObjectId], asyncMiddleware(async 
             { $sort : {week : 1, dayValue : 1 } }
         ])
 
-        return res.render('add_food_form',{user: req.session.user.name, foods, valErr: "Can't find the food you are looking for." });
+        return res.render('add_food_form',{foods, valErr: "Can't find the food you are looking for." });
     }
 // This aggregation method is to find and delete all feedbacks related to the food item which is to be deleted.
     const ObjectId = mongoose.Types.ObjectId; 
@@ -120,7 +120,7 @@ router.get('/:_id/delete', [auth,admin,validateObjectId], asyncMiddleware(async 
         {$addFields:{ dayValue:{$indexOfArray:[["Monday", "Tuesday", "Wednesday","Thursday","Friday"], "$day"]}}},
         { $sort : {week : 1, dayValue : 1 } }
     ])
-    res.render('add_food_form',{ user: req.session.user.name, foods, deletedFood: deletedFood.name});
+    res.render('add_food_form',{ foods, deletedFood: deletedFood.name});
     
 }));
 

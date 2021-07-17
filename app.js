@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const config = require('config');
 const session = require('express-session');
 var MongoDBStore = require('connect-mongodb-session')(session);
-
+const helpers = require('./helpers');
 
 const app = express();
 
@@ -52,7 +52,6 @@ process.on('unhandledRejection', (ex)=>{
   logger.error({message: ex.message, level: ex.level, meta: ex});
   process.exit(1);
 });
-//loggers end
 
 // check session secret
 if(!config.get('sessionSecret')) {
@@ -60,9 +59,6 @@ if(!config.get('sessionSecret')) {
   logger.log('FATAL ERROR: sessionSecret is not defined! Exiting process...');
   process.exit(1);
 };
-
-//throw new Error('fake - something failed in startup');
-//const p = Promise.reject(new Error('fake - UNHANDLED PROMISE REJECTION'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -77,6 +73,7 @@ const store = new MongoDBStore({
   uri: config.get('db'),
   collection: 'mySessions'
 });
+
 app.use(session({
   key: 'my_session',
   secret: config.get('sessionSecret'),
@@ -90,12 +87,21 @@ app.use(session({
   store: store
 }));
 
+// pass variables to our templates + all requests
+app.use((req, res, next) => {
+  res.locals.h = helpers;
+  // res.locals.flashes = req.flash();
+  res.locals.user = req.session.user.name || null;
+  res.locals.currentPath = req.path;
+  next();
+});
+
 require('./startup/logging')(app);
 require('./startup/routes')(app);
 require('./startup/prod')(app);
 
 // This middleware will check if user's cookie is still saved in browser and user is not set, then automatically log the user out.
-// This usually happens when you stop your express server after login, your cookie still remains saved in the browser.
+// This usually happens when you stop your express server after login, he cookie still remains saved in the browser.
 app.use((req, res, next) => {
   if (req.cookies.my_session && !req.session.user) {
       res.clearCookie('my_session');        
@@ -103,10 +109,12 @@ app.use((req, res, next) => {
   next();
 });
 
+
 //DB connection
 const db = config.get('db');
   mongoose.connect(db, {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true })
     .then(() => console.log(`Connected to ${db}...`));
+
 
 // FIX 404 ERROR HANDLING
 // catch 404 and forward to error handler

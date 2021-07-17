@@ -6,7 +6,7 @@ var CentreSchema = new mongoose.Schema(
   {
     name: {type: String, required: true, maxlength: 100},
     classroom :[{type: String, required: true, maxlength: 100}]
-    //ADD VALIDATOR TO DAYS AND MEAL
+   
   },{ timestamps: true }
 );
 

@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('generated-feedback-app:server');
+var debug = require('debug')('happyfood:server');
 var http = require('http');
 
 /**
